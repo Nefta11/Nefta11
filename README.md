@@ -13,6 +13,8 @@ Actualmente, estoy enfocado en mi formación en el área de Desarrollo de Softwa
 - JavaScript
 - HTML
 - C++
+- CSS
+
 
 ## 💞️ Colaboración
 Estoy emocionado por la posibilidad de colaborar en proyectos interesantes y desafiantes. Si tienes un proyecto en el que crees que podría aportar, ¡estaré encantado de escuchar más sobre él y ver cómo puedo contribuir!
