@@ -1,12 +1,12 @@
-# 👋 ¡Hola! Soy Neftali Arturo 👋
+# 👋 Hello! I'm Neftali Arturo 👋
 
-¡Bienvenido(a) a mi perfil de GitHub! Permíteme contarte un poco sobre mí y mis intereses.
+Welcome to my GitHub profile! Let me tell you a bit about myself and my interests.
 
-## 👀 Intereses
-Soy un apasionado de la tecnología y me encanta explorar nuevas herramientas y soluciones para desafíos tecnológicos. Me fascina el mundo del desarrollo de software y siempre estoy buscando formas de mejorar mis habilidades y aprender nuevas tecnologías.
+## 👀 Interests
+I'm passionate about technology and love exploring new tools and solutions for technological challenges. I'm fascinated by the world of software development and am always looking for ways to improve my skills and learn new technologies.
 
-## 🌱 Actualmente estoy aprendiendo
-Actualmente, estoy enfocado en mi formación en el área de Desarrollo de Software Multiplataforma dentro de la carrera de Tecnologías de la Información. Mi objetivo es dominar las habilidades necesarias para crear soluciones innovadoras y robustas. Estoy inmerso en el estudio y la práctica de varias tecnologías, incluyendo:
+## 🌱 Currently, I'm learning
+Currently, I'm focused on my training in the field of Multiplatform Software Development as part of my Information Technology degree. My goal is to master the skills necessary to create innovative and robust solutions. I'm immersed in studying and practicing various technologies, including:
 - SQL
 - Java
 - PHP
@@ -14,11 +14,9 @@ Actualmente, estoy enfocado en mi formación en el área de Desarrollo de Softwa
 - HTML
 - C++
 - CSS
+- Python
+## 💞️ Collaboration
+I'm excited about the opportunity to collaborate on interesting and challenging projects. If you have a project you believe I could contribute to, I'll be happy to hear more about it and see how I can contribute!
 
-
-## 💞️ Colaboración
-Estoy emocionado por la posibilidad de colaborar en proyectos interesantes y desafiantes. Si tienes un proyecto en el que crees que podría aportar, ¡estaré encantado de escuchar más sobre él y ver cómo puedo contribuir!
-
-## 📫 Cómo contactarme
-Si deseas ponerte en contacto conmigo, puedes hacerlo a través de mi correo electrónico neftalearturohernandez@gmail.com .
-
+## 📫 How to reach me
+If you'd like to get in touch with me, you can do so via my email at neftalearturohernandez@gmail.com.
