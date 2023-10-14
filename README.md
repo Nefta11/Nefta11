@@ -8,7 +8,17 @@
         my skills and learn new technologies.
     </h3>
 </div> 
+<div id="header" align="center">
+    <h1 align="center">🌱 Currently, I'm learning</h1>
+    <h3 align="justify">Currently, I'm focused on my training
+        in the field of Multiplatform Software Development as part
+        of my Information Technology degree. My goal is to master the
+        skills necessary to create innovative and robust solutions.
+        I'm immersed in studying and practicing various technologies, including:
+    </h3>
+    <h1 align="center">💻 Languages and Tools I'm Familiar With</h1>
 
+</div>
 - Java
 - PHP
 - JavaScript
