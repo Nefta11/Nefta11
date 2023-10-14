@@ -9,7 +9,8 @@
         <img src="https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=fff&style=flat"
             alt="Instagram Badge">
     </a>
-
+</div>
+<div id="header" align="center">
     <h2 align="center">Welcome to my GitHub profile! Let me tell you a bit about myself and my interests.</h2>
     <h1 align="left">👀 Interests</h1>
     <h3 align="justify">I'm passionate about technology and love exploring new tools and solutions for technological
