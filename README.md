@@ -3,7 +3,7 @@
     <h1 align="center" color="red">👋 Hello! I'm Neftali Arturo 👋</h1>
     <h2 align="center">Welcome to my GitHub profile! Let me tell you a bit about myself and my interests.</h2>
     <h1 align="left">👀 Interests</h1>
-    <h3 align="center" >I'm passionate about technology and love exploring new tools and solutions for technological
+    <h3 align="justify" >I'm passionate about technology and love exploring new tools and solutions for technological
         challenges. I'm fascinated by the world of software development and am always looking for ways to improve
         my skills and learn new technologies.
     </h3>
