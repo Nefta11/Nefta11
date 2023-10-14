@@ -17,15 +17,21 @@
         I'm immersed in studying and practicing various technologies, including:
     </h3>
     <h1 align="left">💻 Languages and Tools I'm Familiar With</h1>
-
+    <img src="https://img.shields.io/badge/Adobe%20XD-FF61F6?logo=adobexd&logoColor=fff&style=plastic"
+        alt="Adobe XD Badge">
+    <img src="https://img.shields.io/badge/Android%20Studio-3DDC84?logo=androidstudio&logoColor=fff&style=flat"
+        alt="Android Studio Badge">
+    <img src="https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=fff&style=flat" alt="MySQL Badge">
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat"
+        alt="JavaScript Badge">
+    <img src="https://img.shields.io/badge/PHP-777BB4?logo=php&logoColor=fff&style=flat" alt="PHP Badge">
+    <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=flat" alt="HTML5 Badge">
+    <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=flat" alt="CSS3 Badge">
+    <img src="https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=fff&style=flat" alt="C++ Badge">
+    <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=flat" alt="Python Badge">
+    <img src="https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=fff&style=flat" alt="MongoDB Badge">
+    <img src="https://img.shields.io/badge/MariaDB-003545?logo=mariadb&logoColor=fff&style=flat" alt="MariaDB Badge">
 </div>
-- Java
-- PHP
-- JavaScript
-- HTML
-- C++
-- CSS
-- Python
 ## 💞️ Collaboration
 I'm excited about the opportunity to collaborate on interesting and challenging projects. If you have a project you believe I could contribute to, I'll be happy to hear more about it and see how I can contribute!
 
