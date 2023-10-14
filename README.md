@@ -52,8 +52,10 @@
     <img src="https://img.shields.io/badge/MariaDB-003545?logo=mariadb&logoColor=fff&style=flat" alt="MariaDB Badge">
     <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=flat" alt="TypeScript Badge">
 </div>
-## 💞️ Collaboration
-I'm excited about the opportunity to collaborate on interesting and challenging projects. If you have a project you believe I could contribute to, I'll be happy to hear more about it and see how I can contribute!
+<div id="header" align="center">
+    <h1 align="center">💞️ Collaboration</h1>
+    <h3>I'm excited about the opportunity to collaborate on interesting and challenging projects. If you have a project you believe I could contribute to, I'll be happy to hear more about it and see how I can contribute!</h3>
+</div>
 
 ## 📫 How to reach me
 If you'd like to get in touch with me, you can do so via my email at neftalearturohernandez@gmail.com.
