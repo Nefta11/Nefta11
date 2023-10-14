@@ -33,7 +33,7 @@
         in the field of Multiplatform Software Development as part
         of my Information Technology degree. My goal is to master the
         skills necessary to create innovative and robust solutions.
-        I'm immersed in studying and practicing various technologies, including:
+        I'm immersed in studying and practicing various technologies.
     </h3>
     <h1 align="left">💻 Languages and Tools I'm Familiar With</h1>
     <img src="https://img.shields.io/badge/Adobe%20XD-FF61F6?logo=adobexd&logoColor=fff&style=plastic"
