@@ -31,6 +31,7 @@
     <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=flat" alt="Python Badge">
     <img src="https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=fff&style=flat" alt="MongoDB Badge">
     <img src="https://img.shields.io/badge/MariaDB-003545?logo=mariadb&logoColor=fff&style=flat" alt="MariaDB Badge">
+    <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=flat" alt="TypeScript Badge">
 </div>
 ## 💞️ Collaboration
 I'm excited about the opportunity to collaborate on interesting and challenging projects. If you have a project you believe I could contribute to, I'll be happy to hear more about it and see how I can contribute!
