@@ -1,17 +1,25 @@
 <div id="header" align="center">
     <img src="https://media.giphy.com/media/scZPhLqaVOM1qG4lT9/giphy.gif" width="200">
-    <h1 align="center" color="red">👋 Hello! I'm Neftali Arturo 👋</h1>
+    <h1 align="center">👋 Hello! I'm Neftali Arturo 👋</h1>
     <h2 align="center">Welcome to my GitHub profile! Let me tell you a bit about myself and my interests.</h2>
     <h1 align="left">👀 Interests</h1>
     <h3 align="justify" >I'm passionate about technology and love exploring new tools and solutions for technological
         challenges. I'm fascinated by the world of software development and am always looking for ways to improve
         my skills and learn new technologies.
     </h3>
-</div>
+    <div >
+        <h1 align="center" >🌱 Currently, I'm learning</h1>
+        <h3 align="justify">Currently, I'm focused on my training 
+            in the field of Multiplatform Software Development as part 
+            of my Information Technology degree. My goal is to master the 
+            skills necessary to create innovative and robust solutions. 
+            I'm immersed in studying and practicing various technologies, including:
+        </h3>
+        <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="">
+    </div>
 
-## 🌱 Currently, I'm learning
-Currently, I'm focused on my training in the field of Multiplatform Software Development as part of my Information Technology degree. My goal is to master the skills necessary to create innovative and robust solutions. I'm immersed in studying and practicing various technologies, including:
-- SQL
+</div> 
+
 - Java
 - PHP
 - JavaScript
