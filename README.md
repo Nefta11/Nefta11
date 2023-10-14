@@ -16,7 +16,7 @@
         skills necessary to create innovative and robust solutions.
         I'm immersed in studying and practicing various technologies, including:
     </h3>
-    <h1 align="center">💻 Languages and Tools I'm Familiar With</h1>
+    <h1 align="left">💻 Languages and Tools I'm Familiar With</h1>
 
 </div>
 - Java
