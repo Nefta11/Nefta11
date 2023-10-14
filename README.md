@@ -55,10 +55,9 @@
 
 <div id="header" align="center">
     <h1 align="center">📊 Statistics</h1>
-    <a href="https://git.io/streak-stats">
-        <img src="https://github-readme-streak-stats.herokuapp.com?user=Nefta11&theme=java-dark&hide_border=&border_radius=5&date_format=M%20j%5B%2C%20Y%5D" alt="GitHub Streak">
-    </a>
+    [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Nefta11&theme=java-dark&hide_border=&border_radius=5&date_format=M%20j%5B%2C%20Y%5D&mode=weekly)](https://git.io/streak-stats)
 </div>
+
 
 
 <div id="header" align="center">
