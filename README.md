@@ -52,6 +52,15 @@
     <img src="https://img.shields.io/badge/MariaDB-003545?logo=mariadb&logoColor=fff&style=flat" alt="MariaDB Badge">
     <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=flat" alt="TypeScript Badge">
 </div>
+
+<div id="header" align="center">
+    <h1 align="center">📊 Statistics</h1>
+    <a href="https://git.io/streak-stats">
+        <img src="https://github-readme-streak-stats.herokuapp.com?user=Nefta11&theme=java-dark&hide_border=&border_radius=5&date_format=M%20j%5B%2C%20Y%5D" alt="GitHub Streak">
+    </a>
+</div>
+
+
 <div id="header" align="center">
     <h1 align="center">💞️ Collaboration</h1>
     <h3>I'm excited about the opportunity to collaborate on interesting and challenging projects. If you have a project you believe I could contribute to, I'll be happy to hear more about it and see how I can contribute!</h3>
