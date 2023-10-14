@@ -9,6 +9,19 @@
         <img src="https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=fff&style=flat"
             alt="Instagram Badge">
     </a>
+    <a href="https://twitter.com/Netf22?t=-VbupxN_bFlr5GdKrqO3RA&s=08" target="_blank">
+        <img src="https://img.shields.io/badge/Twitter-1D9BF0?logo=twitter&logoColor=fff&style=flat"
+            alt="Twitter Badge">
+    </a>
+
+</div>
+<div id="header" align="center">
+    <h2 align="center">Welcome to my GitHub profile! Let me tell you a bit about myself and my interests.</h2>
+    <h1 align="left">👀 Interests</h1>
+    <h3 align="justify">I'm passionate about technology and love exploring new tools and solutions for technological
+        challenges. I'm fascinated by the world of software development and am always looking for ways to improve
+        my skills and learn new technologies.
+    </h3>
 </div>
 <div id="header" align="center">
     <h2 align="center">Welcome to my GitHub profile! Let me tell you a bit about myself and my interests.</h2>
