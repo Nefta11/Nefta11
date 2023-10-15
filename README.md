@@ -51,21 +51,23 @@
     <img src="https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=fff&style=flat" alt="MongoDB Badge">
     <img src="https://img.shields.io/badge/MariaDB-003545?logo=mariadb&logoColor=fff&style=flat" alt="MariaDB Badge">
     <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=flat" alt="TypeScript Badge">
+    <img src="https://img.shields.io/badge/Java-007396?logo=java&logoColor=fff&style=flat" alt="Java Badge">
 </div>
 
 <div id="header" align="center">
     <h1 align="center">📊 Statistics</h1>
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nefta11&layout=compact&theme=dracula"
+        alt="Top Lenguajes" />
     <a
         href="https://streak-stats.demolab.com?user=Nefta11&theme=dracula&hide_border=FALSO&border_radius=5&locale=es&date_format=M%20j%5B%2C%20Y%5D&mode=weekly">
         <img src="https://streak-stats.demolab.com?user=Nefta11&theme=dracula&hide_border=FALSO&border_radius=5&locale=es&date_format=M%20j%5B%2C%20Y%5D&mode=weekly"
             alt="GitHub Streak (Weekly)">
     </a>
-    <img src="https://github-readme-stats.vercel.app/api?username=Nefta11&show_icons=true&count_private=true&theme=dracula"
-        alt="Estadísticas de GitHub" />
     <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Nefta11&theme=dracula"
         alt="Estadísticas de GitHub" />
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nefta11&layout=compact&theme=dracula"
-        alt="Top Lenguajes" />
+    <img src="https://github-readme-stats.vercel.app/api?username=Nefta11&show_icons=true&count_private=true&theme=dracula"
+        alt="Estadísticas de GitHub" />
+
 </div>
 
 
@@ -75,5 +77,9 @@
     <h3>I'm excited about the opportunity to collaborate on interesting and challenging projects. If you have a project you believe I could contribute to, I'll be happy to hear more about it and see how I can contribute!</h3>
 </div>
 
-## 📫 How to reach me
-If you'd like to get in touch with me, you can do so via my email at neftalearturohernandez@gmail.com.
+
+
+<div id="header" align="center">
+    <h1 align="center"> 📫 How to reach me</h1>
+    <h3>If you'd like to get in touch with me, you can do so via my email at neftalearturohernandez@gmail.com.</h3>
+</div>
