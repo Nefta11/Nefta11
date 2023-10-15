@@ -60,10 +60,12 @@
         <img src="https://streak-stats.demolab.com?user=Nefta11&theme=dracula&hide_border=FALSO&border_radius=5&locale=es&date_format=M%20j%5B%2C%20Y%5D&mode=weekly"
             alt="GitHub Streak (Weekly)">
     </a>
-    <img src="https://github-readme-stats.vercel.app/api?username=Nefta11&show_icons=true&count_private=true&theme=dark"
+    <img src="https://github-readme-stats.vercel.app/api?username=Nefta11&show_icons=true&count_private=true&theme=dracula"
         alt="Estadísticas de GitHub" />
-    <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Nefta11&theme=github_dark"
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Nefta11&theme=dracula"
         alt="Estadísticas de GitHub" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nefta11&layout=compact&theme=dracula"
+        alt="Top Lenguajes" />
 </div>
 
 
