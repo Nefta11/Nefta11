@@ -62,15 +62,9 @@
     </a>
     <img src="https://github-readme-stats.vercel.app/api?username=Nefta11&show_icons=true&count_private=true&theme=dark"
         alt="Estadísticas de GitHub" />
-
     <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Nefta11&theme=github_dark"
         alt="Estadísticas de GitHub" />
-
 </div>
-
-
-
-
 
 
 
