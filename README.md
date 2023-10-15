@@ -20,6 +20,8 @@
         <img src="https://img.shields.io/badge/Gmail-EA4335?logo=gmail&logoColor=fff&style=flat" alt="Gmail Badge">
     </a>
 </div>
+
+
 <div id="header" align="center">
     <h2 align="center">Welcome to my GitHub profile! Let me tell you a bit about myself and my interests.</h2>
     <h1 align="left">👀 Interests</h1>
