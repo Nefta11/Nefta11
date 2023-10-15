@@ -1,9 +1,6 @@
-<div id="header" align="center">
-
+<div id="header" align="center"
+    <img src="https://media.giphy.com/media/scZPhLqaVOM1qG4lT9/giphy.gif" width="200">
     <h1 align="center">👋 Hello! I'm Neftali Arturo 👋</h1>
-
-    <img src="https://media.giphy.com/media/scZPhLqaVOM1qG4lT9/giphy.gif" width="200" alt="Animated Gif">
-
     <a href="https://www.facebook.com/profile.php?id=100008252550294" target="_blank">
         <img src="https://img.shields.io/badge/Facebook-1877F2?logo=facebook&logoColor=fff&style=flat"
             alt="Facebook Badge">
@@ -19,6 +16,8 @@
     <a href="mailto:neftaliarturohernandez@gmail.com" target="_blank">
         <img src="https://img.shields.io/badge/Gmail-EA4335?logo=gmail&logoColor=fff&style=flat" alt="Gmail Badge">
     </a>
+
+
 </div>
 
 
