@@ -55,17 +55,17 @@
 
 <div id="header" align="center">
     <h1 align="center">📊 Statistics</h1>
-    <a href="https://streak-stats.demolab.com?user=Nefta11&theme=dracula&hide_border=FALSO&border_radius=5&locale=es&date_format=M%20j%5B%2C%20Y%5D&mode=weekly">
-        <img src="https://streak-stats.demolab.com?user=Nefta11&theme=dracula&hide_border=FALSO&border_radius=5&locale=es&date_format=M%20j%5B%2C%20Y%5D&mode=weekly" alt="GitHub Streak (Weekly)">
+    <a
+        href="https://streak-stats.demolab.com?user=Nefta11&theme=dracula&hide_border=FALSO&border_radius=5&locale=es&date_format=M%20j%5B%2C%20Y%5D&mode=weekly">
+        <img src="https://streak-stats.demolab.com?user=Nefta11&theme=dracula&hide_border=FALSO&border_radius=5&locale=es&date_format=M%20j%5B%2C%20Y%5D&mode=weekly"
+            alt="GitHub Streak (Weekly)">
     </a>
+    <img src="https://github-readme-stats.vercel.app/api?username=Nefta11&show_icons=true&count_private=true&theme=dark"
+        alt="Estadísticas de GitHub" />
 
-    <p align="center">
-        <img src="https://github-readme-stats.vercel.app/api?username=Nefta11&show_icons=true&count_private=true&theme=dark" alt="Estadísticas de GitHub" />
-    </p>
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Nefta11&theme=github_dark"
+        alt="Estadísticas de GitHub" />
 
-    <p align="center">
-        <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Nefta11&theme=github_dark" alt="Estadísticas de GitHub" />
-    </p>
 </div>
 
 
