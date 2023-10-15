@@ -1,6 +1,9 @@
-<div id="header" align="center"
-    <img src="https://media.giphy.com/media/scZPhLqaVOM1qG4lT9/giphy.gif" width="200">
+<div id="header" align="center">
+
     <h1 align="center">👋 Hello! I'm Neftali Arturo 👋</h1>
+    <p>
+        <img src="https://media.giphy.com/media/scZPhLqaVOM1qG4lT9/giphy.gif" width="200" alt="Animated Gif">
+    </p>
     <a href="https://www.facebook.com/profile.php?id=100008252550294" target="_blank">
         <img src="https://img.shields.io/badge/Facebook-1877F2?logo=facebook&logoColor=fff&style=flat"
             alt="Facebook Badge">
@@ -16,8 +19,6 @@
     <a href="mailto:neftaliarturohernandez@gmail.com" target="_blank">
         <img src="https://img.shields.io/badge/Gmail-EA4335?logo=gmail&logoColor=fff&style=flat" alt="Gmail Badge">
     </a>
-
-
 </div>
 <div id="header" align="center">
     <h2 align="center">Welcome to my GitHub profile! Let me tell you a bit about myself and my interests.</h2>
