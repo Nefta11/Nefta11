@@ -1,9 +1,9 @@
 <div id="header" align="center">
 
     <h1 align="center">👋 Hello! I'm Neftali Arturo 👋</h1>
-    <p>
-        <img src="https://media.giphy.com/media/scZPhLqaVOM1qG4lT9/giphy.gif" width="200" alt="Animated Gif">
-    </p>
+
+    <img src="https://media.giphy.com/media/scZPhLqaVOM1qG4lT9/giphy.gif" width="200" alt="Animated Gif">
+
     <a href="https://www.facebook.com/profile.php?id=100008252550294" target="_blank">
         <img src="https://img.shields.io/badge/Facebook-1877F2?logo=facebook&logoColor=fff&style=flat"
             alt="Facebook Badge">
