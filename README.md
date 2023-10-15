@@ -36,8 +36,6 @@
         I'm immersed in studying and practicing various technologies.
     </h3>
     <h1 align="left">💻 Languages and Tools I'm Familiar With</h1>
-     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nefta11&layout=compact&theme=dracula"
-        alt="Top Lenguajes" />
     <img src="https://img.shields.io/badge/Adobe%20XD-FF61F6?logo=adobexd&logoColor=fff&style=plastic"
         alt="Adobe XD Badge">
     <img src="https://img.shields.io/badge/Android%20Studio-3DDC84?logo=androidstudio&logoColor=fff&style=flat"
@@ -67,6 +65,8 @@
         alt="Estadísticas de GitHub" />
     <img src="https://github-readme-stats.vercel.app/api?username=Nefta11&show_icons=true&count_private=true&theme=dracula"
         alt="Estadísticas de GitHub" />
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nefta11&layout=compact&theme=dracula"
+        alt="Top Lenguajes" />
 
 </div>
 
