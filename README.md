@@ -1,6 +1,6 @@
-<div id="header" align="center">
-    <img src="https://media.giphy.com/media/scZPhLqaVOM1qG4lT9/giphy.gif" width="200">
+<div id="header" align="center"
     <h1 align="center">👋 Hello! I'm Neftali Arturo 👋</h1>
+     <img src="https://media.giphy.com/media/scZPhLqaVOM1qG4lT9/giphy.gif" width="200">
     <a href="https://www.facebook.com/profile.php?id=100008252550294" target="_blank">
         <img src="https://img.shields.io/badge/Facebook-1877F2?logo=facebook&logoColor=fff&style=flat"
             alt="Facebook Badge">
@@ -56,6 +56,10 @@
 
 <div id="header" align="center">
     <h1 align="center">📊 Statistics</h1>
+    <div id="header" align="center">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nefta11&layout=compact&theme=dracula"
+        alt="Top Lenguajes" />
+</div>
     <a
         href="https://streak-stats.demolab.com?user=Nefta11&theme=dracula&hide_border=FALSO&border_radius=5&locale=es&date_format=M%20j%5B%2C%20Y%5D&mode=weekly">
         <img src="https://streak-stats.demolab.com?user=Nefta11&theme=dracula&hide_border=FALSO&border_radius=5&locale=es&date_format=M%20j%5B%2C%20Y%5D&mode=weekly"
@@ -65,9 +69,6 @@
         alt="Estadísticas de GitHub" />
     <img src="https://github-readme-stats.vercel.app/api?username=Nefta11&show_icons=true&count_private=true&theme=dracula"
         alt="Estadísticas de GitHub" />
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nefta11&layout=compact&theme=dracula"
-        alt="Top Lenguajes" />
-
 </div>
 
 
