@@ -40,14 +40,13 @@
     <h1 align="left">💻 Languages and Tools I'm Familiar With</h1>
     <img src="https://img.shields.io/badge/Adobe%20XD-FF61F6?logo=adobexd&logoColor=fff&style=plastic"
         alt="Adobe XD Badge">
-    <img src="https://img.shields.io/badge/Android%20Studio-3DDC84?logo=androidstudio&logoColor=fff&style=flat"
-        alt="Android Studio Badge">
+    <img src="https://img.shields.io/badge/Android%20Studio-3DDC84?logo=androidstudio&logoColor=fff&style=flat" alt="Android Studio Badge">
     <img src="https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=fff&style=flat" alt="MySQL Badge">
-    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat"
-        alt="JavaScript Badge">
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat" alt="JavaScript Badge">
     <img src="https://img.shields.io/badge/PHP-777BB4?logo=php&logoColor=fff&style=flat" alt="PHP Badge">
     <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=flat" alt="HTML5 Badge">
     <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=flat" alt="CSS3 Badge">
+    <img src="https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff&style=flat" alt="Git Badge">
     <img src="https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=fff&style=flat" alt="C++ Badge">
     <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=flat" alt="Python Badge">
     <img src="https://img.shields.io/badge/Node.js-393?logo=nodedotjs&logoColor=fff&style=flat" alt="Node.js Badge">
@@ -59,6 +58,8 @@
     <img src="https://img.shields.io/badge/MariaDB-003545?logo=mariadb&logoColor=fff&style=flat" alt="MariaDB Badge">
     <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=flat" alt="TypeScript Badge">
     <img src="https://img.shields.io/badge/Java-007396?logo=java&logoColor=fff&style=flat" alt="Java Badge">
+    <img src="https://img.shields.io/badge/Cisco-1BA0D7?logo=cisco&logoColor=fff&style=flat" alt="Cisco Badge">
+    <img src="https://img.shields.io/badge/Microsoft%20Office-D83B01?logo=microsoftoffice&logoColor=fff&style=flat" alt="Microsoft Office Badge">
 </div>
 
 <div id="header" align="center">
