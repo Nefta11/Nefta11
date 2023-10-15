@@ -1,6 +1,6 @@
 <div id="header" align="center">
-    <h1 align="center">👋 Hello! I'm Neftali Arturo 👋</h1>
     <div id="header" align="center">
+    <h1 align="center">👋 Hello! I'm Neftali Arturo 👋</h1>
     <img src="https://media.giphy.com/media/scZPhLqaVOM1qG4lT9/giphy.gif" width="200">
     </div>
     <a href="https://www.facebook.com/profile.php?id=100008252550294" target="_blank">
