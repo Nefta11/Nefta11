@@ -55,7 +55,9 @@
 
 <div id="header" align="center">
     <h1 align="center">📊 Statistics</h1>
-    <img src="https://github-readme-streak-stats.herokuapp.com?user=Nefta11&theme=java-dark&border_radius=5&date_format=M%20j%5B%2C%20Y%5D&mode=weekly" alt="GitHub Streak (Weekly)" />
+    <a href="https://streak-stats.demolab.com?user=Nefta11&theme=dracula&hide_border=FALSO&border_radius=5&locale=es&date_format=M%20j%5B%2C%20Y%5D&mode=weekly">
+        <img src="https://streak-stats.demolab.com?user=Nefta11&theme=dracula&hide_border=FALSO&border_radius=5&locale=es&date_format=M%20j%5B%2C%20Y%5D&mode=weekly" alt="GitHub Streak (Weekly)">
+    </a>
 </div>
 
 
