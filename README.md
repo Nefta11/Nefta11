@@ -65,22 +65,19 @@
 <div align="center">
     <h1>📊 Statistics</h1>
     <div>
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nefta11&layout=compact&theme=rose-pine"
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nefta11&layout=compact&theme=dracula"
             alt="Top Lenguajes" />
     </div>
-    
+
     <a href="https://git.io/streak-stats">
         <img src="https://streak-stats.demolab.com?user=Nefta11&theme=rose-pine&hide_border=FALSO&locale=es&date_format=M%20j%5B%2C%20Y%5D&exclude_days=Mon" alt="GitHub Streak" />
     </a>
-   
-    <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Nefta11&theme=rose-pine"
+
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Nefta11&theme=dracula"
         alt="Estadísticas de GitHub" />
-    <img src="https://github-readme-stats.vercel.app/api?username=Nefta11&show_icons=true&count_private=true&theme=rose-pine"
+    <img src="https://github-readme-stats.vercel.app/api?username=Nefta11&show_icons=true&count_private=true&theme=dracula"
         alt="Estadísticas de GitHub" />
 </div>
-
-
-
 
 <div id="header" align="center">
     <h1 align="center">💞️ Collaboration</h1>
