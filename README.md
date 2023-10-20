@@ -62,20 +62,23 @@
     <img src="https://img.shields.io/badge/Microsoft%20Office-D83B01?logo=microsoftoffice&logoColor=fff&style=flat" alt="Microsoft Office Badge">
 </div>
 
-<div id="header" align="center">
-    <h1 align="center">📊 Statistics</h1>
-    <div id="header" align="center">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nefta11&layout=compact&theme=shadow-red"
-        alt="Top Lenguajes" />
+<div align="center">
+    <h1>📊 Statistics</h1>
+    <div>
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nefta11&layout=compact&theme=rose-pine"
+            alt="Top Lenguajes" />
+    </div>
+    
+    <a href="https://git.io/streak-stats">
+        <img src="https://streak-stats.demolab.com?user=Nefta11&theme=rose-pine&hide_border=FALSO&locale=es&date_format=M%20j%5B%2C%20Y%5D&exclude_days=Mon" alt="GitHub Streak" />
+    </a>
+   
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Nefta11&theme=rose-pine"
+        alt="Estadísticas de GitHub" />
+    <img src="https://github-readme-stats.vercel.app/api?username=Nefta11&show_icons=true&count_private=true&theme=rose-pine"
+        alt="Estadísticas de GitHub" />
 </div>
 
-<a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=Nefta11&theme=shadow-red&hide_border=FALSO&date_format=M%20j%5B%2C%20Y%5D&exclude_days=Mon" alt="GitHub Streak" /></a>
-   
-    <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Nefta11&theme=shadow-red"
-        alt="Estadísticas de GitHub" />
-    <img src="https://github-readme-stats.vercel.app/api?username=Nefta11&show_icons=true&count_private=true&theme=shadow-red"
-        alt="Estadísticas de GitHub" />
-</div>
 
 
 
