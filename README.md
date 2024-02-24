@@ -12,8 +12,7 @@
             alt="Instagram Badge">
     </a>
     <a href="https://twitter.com/Netf22?t=-VbupxN_bFlr5GdKrqO3RA&s=08" target="_blank">
-        <img src="https://img.shields.io/badge/Twitter-1D9BF0?logo=twitter&logoColor=fff&style=flat"
-            alt="Twitter Badge">
+          <img src="https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white&style=flat" alt="X Badge">
     </a>
     <a href="mailto:neftaliarturohernandez@gmail.com" target="_blank">
         <img src="https://img.shields.io/badge/Gmail-EA4335?logo=gmail&logoColor=fff&style=flat" alt="Gmail Badge">
