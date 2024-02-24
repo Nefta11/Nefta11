@@ -59,6 +59,9 @@
     <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=flat" alt="TypeScript Badge">
     <img src="https://img.shields.io/badge/Java-007396?logo=java&logoColor=fff&style=flat" alt="Java Badge">
     <img src="https://img.shields.io/badge/Cisco-1BA0D7?logo=cisco&logoColor=fff&style=flat" alt="Cisco Badge">
+    <img src="https://img.shields.io/badge/Adobe%20XD-470137?style=plastic&logo=Adobe%20XD&logoColor=#FF61F6" alt="Adobe XD">
+    
+<img src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=plastic&logo=sqlite&logoColor=white" alt="SQLite">
     <img src="https://img.shields.io/badge/Microsoft%20Office-D83B01?logo=microsoftoffice&logoColor=fff&style=flat" alt="Microsoft Office Badge">
     <img src="https://img.shields.io/badge/Spring-%236DB33F?logo=spring&logoColor=white&style=flat" alt="Spring Badge">
     <img src="https://img.shields.io/badge/TypeScript-%23007ACC?logo=typescript&logoColor=white&style=flat" alt="TypeScript Badge">
@@ -99,7 +102,12 @@
     <h3>I'm excited about the opportunity to collaborate on interesting and challenging projects. If you have a project you believe I could contribute to, I'll be happy to hear more about it and see how I can contribute!</h3>
 </div>
 
-
+<div align="center">
+    <h1> 💰 You can help me by Donating</h1>
+    <a href="https://paypal.me/neftaliarturohernandez@gmail.com">
+    <img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="PayPal">
+</a>
+</div>
 
 <div id="header" align="center">
     <h1 align="center"> 📫 How to reach me</h1>
