@@ -81,12 +81,12 @@
 
 <div align="center">
     <h1>🏆 GitHub Trophies</h1>
-    <img src="https://github-profile-trophy.vercel.app/?username=Nefta11&theme=yeblu&no-frame=false&no-bg=true&margin-w=4" alt="GitHub Profile Trophy">
+<img src="https://github-profile-trophy.vercel.app/?username=Nefta11&theme=radical&no-frame=false&no-bg=true&margin-w=4" alt="GitHub Profile Trophy">
 </div>
 
 <div align="center">
     <h1> ✍️ Random Dev Quote</h1>
-    <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=yeblu" alt="GitHub Readme Quotes">
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="GitHub Readme Quotes">
 </div>
 
 <div align="center">
