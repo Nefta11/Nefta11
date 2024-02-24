@@ -108,6 +108,12 @@
     <img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="PayPal">
 </a>
 </div>
+<div id="header" align="center">
+<a href="https://visitcount.itsvg.in">
+    <img src="https://visitcount.itsvg.in/api?id=Nefta11&icon=9&color=11" alt="Visit Count">
+</a>
+
+</div>
 
 <div id="header" align="center">
     <h1 align="center"> 😂 Random Dev Meme</h1>
