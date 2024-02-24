@@ -91,7 +91,7 @@
 
 <div align="center">
     <h1> 🔝 Top Contributed Repo</h1>
-<img src="https://github-contributor-stats.vercel.app/api?username=Nefta11&limit=5&theme=yeblu&combine_all_yearly_contributions=true" alt="GitHub Contributor Stats">
+<img src="https://github-contributor-stats.vercel.app/api?username=Nefta11&limit=5&theme=yeblu" alt="GitHub Contributor Stats">
 </div>
 
 <div id="header" align="center">
