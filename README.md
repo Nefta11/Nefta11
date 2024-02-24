@@ -53,11 +53,11 @@
     <img src="https://img.shields.io/badge/Pug-A86454?logo=pug&logoColor=fff&style=flat" alt="Pug Badge">
     <img src="https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=fff&style=flat" alt="MongoDB Badge">
     <img src="https://img.shields.io/badge/MariaDB-003545?logo=mariadb&logoColor=fff&style=flat" alt="MariaDB Badge">
-    <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=flat" alt="TypeScript Badge">
     <img src="https://img.shields.io/badge/Java-007396?logo=java&logoColor=fff&style=flat" alt="Java Badge">
     <img src="https://img.shields.io/badge/Cisco-1BA0D7?logo=cisco&logoColor=fff&style=flat" alt="Cisco Badge">
     <img src="https://img.shields.io/badge/Adobe%20XD-470137?style=plastic&logo=Adobe%20XD&logoColor=#FF61F6" alt="Adobe XD">
-    
+    <img src="https://img.shields.io/badge/express.js-%23404d59.svg?style=plastic&logo=express&logoColor=%2361DAFB" alt="Express.js Badge">
+<img src="https://img.shields.io/badge/laravel-%23FF2D20.svg?style=plastic&logo=laravel&logoColor=white" alt="Laravel Badge">
 <img src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=plastic&logo=sqlite&logoColor=white" alt="SQLite">
     <img src="https://img.shields.io/badge/Microsoft%20Office-D83B01?logo=microsoftoffice&logoColor=fff&style=flat" alt="Microsoft Office Badge">
     <img src="https://img.shields.io/badge/Spring-%236DB33F?logo=spring&logoColor=white&style=flat" alt="Spring Badge">
