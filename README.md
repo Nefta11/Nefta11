@@ -81,7 +81,7 @@
 
 <div align="center">
     <h1>🏆 GitHub Trophies</h1>
-<img src="https://github-profile-trophy.vercel.app/?username=Nefta11&theme=yeblu&no-frame=false&no-bg=true&margin-w=4" alt="GitHub Profile Trophy">
+<img src="https://github-profile-trophy.vercel.app/?username=Nefta11&theme=yeblu&no-frame=true&no-bg=true&margin-w=4" alt="GitHub Profile Trophy">
 </div>
 
 <div align="center">
