@@ -86,7 +86,7 @@
 
 <div align="center">
     <h1> ✍️ Random Dev Quote</h1>
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=yeblu" alt="GitHub Readme Quotes">
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="GitHub Readme Quotes">
 </div>
 
 <div align="center">
