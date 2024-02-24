@@ -60,6 +60,8 @@
     <img src="https://img.shields.io/badge/Java-007396?logo=java&logoColor=fff&style=flat" alt="Java Badge">
     <img src="https://img.shields.io/badge/Cisco-1BA0D7?logo=cisco&logoColor=fff&style=flat" alt="Cisco Badge">
     <img src="https://img.shields.io/badge/Microsoft%20Office-D83B01?logo=microsoftoffice&logoColor=fff&style=flat" alt="Microsoft Office Badge">
+    <img src="https://img.shields.io/badge/Spring-%236DB33F?logo=spring&logoColor=white&style=flat" alt="Spring Badge">
+    <img src="https://img.shields.io/badge/TypeScript-%23007ACC?logo=typescript&logoColor=white&style=flat" alt="TypeScript Badge">
 </div>
 
 <div align="center">
@@ -77,6 +79,20 @@
     
 </div>
 
+<div align="center">
+    <h1>🏆 GitHub Trophies</h1>
+    <img src="https://github-profile-trophy.vercel.app/?username=Nefta11&theme=radical&no-frame=false&no-bg=true&margin-w=4" alt="GitHub Profile Trophy">
+</div>
+
+<div align="center">
+    <h1> ✍️ Random Dev Quote</h1>
+    <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="GitHub Readme Quotes">
+</div>
+
+<div align="center">
+    <h1> 🔝 Top Contributed Repo</h1>
+<img src="https://github-contributor-stats.vercel.app/api?username=Nefta11&limit=5&theme=dark&combine_all_yearly_contributions=true" alt="GitHub Contributor Stats">
+</div>
 
 <div id="header" align="center">
     <h1 align="center">💞️ Collaboration</h1>
