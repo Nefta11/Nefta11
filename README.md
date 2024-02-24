@@ -109,13 +109,6 @@
 </a>
 </div>
 <div id="header" align="center">
-<a href="https://visitcount.itsvg.in">
-    <img src="https://visitcount.itsvg.in/api?id=Nefta11&icon=9&color=11" alt="Visit Count">
-</a>
-
-</div>
-
-<div id="header" align="center">
     <h1 align="center"> 😂 Random Dev Meme</h1>
 <img src="https://randommeme-five.vercel.app/" alt="Random Meme" style="height: 400px;">
 </div>
