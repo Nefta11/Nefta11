@@ -37,6 +37,7 @@
         I'm immersed in studying and practicing various technologies.
     </h3>
     <h1 align="left">💻 Languages and Tools I'm Familiar With</h1>
+    <img src="https://img.shields.io/badge/react_native-%2320232a?style=flat&logo=react&logoColor=%2361DAFB" alt="React Native Badge">
     <img src="https://img.shields.io/badge/Android%20Studio-3DDC84?logo=androidstudio&logoColor=fff&style=flat" alt="Android Studio Badge">
     <img src="https://img.shields.io/badge/mysql-%2300000f.svg?style=flat&logo=mysql&logoColor=white" alt="MySQL Badge">
     <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat" alt="JavaScript Badge">
@@ -102,13 +103,6 @@
 <div id="header" align="center">
     <h1 align="center">💞️ Collaboration</h1>
     <h3>I'm excited about the opportunity to collaborate on interesting and challenging projects. If you have a project you believe I could contribute to, I'll be happy to hear more about it and see how I can contribute!</h3>
-</div>
-
-<div align="center">
-    <h1> 💰 You can help me by Donating</h1>
-    <a href="https://paypal.me/neftaliarturohernandez@gmail.com">
-    <img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="PayPal">
-</a>
 </div>
 <div id="header" align="center">
     <h1 align="center"> 😂 Random Dev Meme</h1>
