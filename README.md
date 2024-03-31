@@ -37,6 +37,7 @@
         I'm immersed in studying and practicing various technologies.
     </h3>
     <h1 align="left">💻 Languages and Tools I'm Familiar With</h1>
+    <img src="https://img.shields.io/badge/laravel-%23FF2D20.svg?style=plastic&logo=laravel&logoColor=white" alt="Laravel Badge">
     <img src="https://img.shields.io/badge/react_native-%2320232a?style=flat&logo=react&logoColor=%2361DAFB" alt="React Native Badge">
     <img src="https://img.shields.io/badge/Android%20Studio-3DDC84?logo=androidstudio&logoColor=fff&style=flat" alt="Android Studio Badge">
     <img src="https://img.shields.io/badge/mysql-%2300000f.svg?style=flat&logo=mysql&logoColor=white" alt="MySQL Badge">
