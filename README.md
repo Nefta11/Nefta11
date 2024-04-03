@@ -87,12 +87,6 @@
     <h1>🏆 GitHub Trophies</h1>
 <img src="https://github-profile-trophy.vercel.app/?username=Nefta11&theme=darkhub&no-frame=false&no-bg=true&margin-w=4" alt="GitHub Profile Trophy">
 </div>
-
-<div align="center">
-    <h1> ✍️ Random Dev Quote</h1>
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=merko" alt="GitHub Readme Quotes">
-</div>
-
 <div align="center">
     <h1> 🔝 Top Contributed Repo</h1>
 <img src="https://github-contributor-stats.vercel.app/api?username=Nefta11&limit=5&theme=yeblu&combine_all_yearly_contributions=true" alt="GitHub Contributor Stats">
