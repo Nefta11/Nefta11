@@ -1,8 +1,9 @@
 <div id="header" align="center">
     <div id="header" align="center">
-    <h1 align="center">👋 Hello! I'm Neftali Arturo 👋</h1>
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExODc0Z3d5Mmg2b211dTRxcTk1dTMzNnp6aGYwdXJ3dGF3bDlrbTQ3aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2IudUHdI075HL02Pkk/giphy.gif" width="200">
-    </div>
+        
+![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=02D9F7FF&size=35&center=true&vCenter=true&width=1000&lines=Hello!;👋👋+I'm+Neftali+Arturo+👋👋;Welcome!)
+        
+</div>
     <a href="https://www.facebook.com/profile.php?id=100008252550294" target="_blank">
         <img src="https://img.shields.io/badge/Facebook-1877F2?logo=facebook&logoColor=fff&style=flat"
             alt="Facebook Badge">
@@ -37,35 +38,43 @@
         I'm immersed in studying and practicing various technologies.
     </h3>
     <h1 align="left">💻 Languages and Tools I'm Familiar With</h1>
-    <img src="https://img.shields.io/badge/laravel-%23FF2D20.svg?style=plastic&logo=laravel&logoColor=white" alt="Laravel Badge">
-    <img src="https://img.shields.io/badge/react_native-%2320232a?style=flat&logo=react&logoColor=%2361DAFB" alt="React Native Badge">
-    <img src="https://img.shields.io/badge/Android%20Studio-3DDC84?logo=androidstudio&logoColor=fff&style=flat" alt="Android Studio Badge">
-    <img src="https://img.shields.io/badge/mysql-%2300000f.svg?style=flat&logo=mysql&logoColor=white" alt="MySQL Badge">
-    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat" alt="JavaScript Badge">
-    <img src="https://img.shields.io/badge/PHP-777BB4?logo=php&logoColor=fff&style=flat" alt="PHP Badge">
-    <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white" alt="HTML5 Badge">    
-    <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=flat" alt="CSS3 Badge">
-    <img src="https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff&style=flat" alt="Git Badge">
-    <img src="https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=fff&style=flat" alt="C++ Badge">
-<img src="https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54" alt="Python Badge">    
-    <img src="https://img.shields.io/badge/Node.js-393?logo=nodedotjs&logoColor=fff&style=flat" alt="Node.js Badge">
-    <img src="https://img.shields.io/badge/Nodemon-76D04B?logo=nodemon&logoColor=fff&style=flat" alt="Nodemon Badge">
-    <img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=fff&style=flat" alt="GitHub Badge">
-    <img src="https://img.shields.io/badge/Arduino-00878F?logo=arduino&logoColor=fff&style=flat" alt="Arduino Badge">
-    <img src="https://img.shields.io/badge/Pug-A86454?logo=pug&logoColor=fff&style=flat" alt="Pug Badge">
-    <img src="https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=fff&style=flat" alt="MongoDB Badge">
-    <img src="https://img.shields.io/badge/MariaDB-003545?logo=mariadb&logoColor=fff&style=flat" alt="MariaDB Badge">
-    <img src="https://img.shields.io/badge/Java-007396?logo=java&logoColor=fff&style=flat" alt="Java Badge">
-    <img src="https://img.shields.io/badge/Cisco-1BA0D7?logo=cisco&logoColor=fff&style=flat" alt="Cisco Badge">
-    <img src="https://img.shields.io/badge/Adobe%20XD-470137?style=plastic&logo=Adobe%20XD&logoColor=#FF61F6" alt="Adobe XD">
-    <img src="https://img.shields.io/badge/express.js-%23404d59.svg?style=plastic&logo=express&logoColor=%2361DAFB" alt="Express.js Badge">
-<img src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=plastic&logo=sqlite&logoColor=white" alt="SQLite">
-    <img src="https://img.shields.io/badge/Microsoft%20Office-D83B01?logo=microsoftoffice&logoColor=fff&style=flat" alt="Microsoft Office Badge">
-    <img src="https://img.shields.io/badge/Spring-%236DB33F?logo=spring&logoColor=white&style=flat" alt="Spring Badge">
-    <img src="https://img.shields.io/badge/TypeScript-%23007ACC?logo=typescript&logoColor=white&style=flat" alt="TypeScript Badge">
-<img src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=plastic&logo=Canva&logoColor=white" alt="Canva Badge">
-<img src="https://img.shields.io/badge/Adobe%20Lightroom-31A8FF.svg?style=plastic&logo=Adobe%20Lightroom&logoColor=white" alt="Adobe Lightroom Badge">
-<img src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=plastic&logo=bootstrap&logoColor=white" alt="Bootstrap Badge">
+    <p align="center">
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/React-Dark.svg" width="48" title="React-Native"> 
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/HTML.svg" width="48" title="HTML"> 
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/CSS.svg" width="48" title="CSS">   
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/JavaScript.svg" width="48"  title="Javascript">   
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/TypeScript.svg" width="48" title="TypeScript">    
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Bootstrap.svg" width="48">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/XD.svg" width="48" title="Adobe XD">   
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Vite-Dark.svg" width="48"  title="Vite">   
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Git.svg" width="48" title="Git">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/MongoDB.svg" width="48" title="MongoDB">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/VSCode-Dark.svg" width="48" title="Vscode">   
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Github-Dark.svg" width="48" title="Github">   
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Postman.svg" width="48" title="Postman">   
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Linux-Dark.svg" width="48" title="Linux">   
+<img src="" width="48" title="">
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/NodeJS-Dark.svg" width="48" title="NodeJs">   
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Ubuntu-Dark.svg" width="48" title="Ubuntu">
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Laravel-Dark.svg" width="48" title="Laravel">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/PHP-Dark.svg" width="48" title="PHP">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/AndroidStudio-Dark.svg" width="48" title="Android Studio">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/MySQL-Dark.svg" width="48" title="Mysql">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Python-Dark.svg" width="48" title="Python"> 
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Arduino.svg" width="48" title="Arduino">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Pug-Dark.svg" width="48" title="Pug">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Java-Dark.svg" width="48" title="Java">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/ExpressJS-Dark.svg" width="48" title="Express.js">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/SQLite.svg" width="48" title="SQlite">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Spring-Dark.svg" width="48" title="Spring">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/React-Light.svg" width="48" title="React.js">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Anaconda-Dark.svg" width="48" title="Anaconda">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Npm-Dark.svg" width="48" title="NPM">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Yarn-Dark.svg" width="48" title="Yarn">  
+<img src="" width="48" title="">  
+<img src="" width="48" title="">  
+
+<p/>
 </div>
 
 <div align="center">
