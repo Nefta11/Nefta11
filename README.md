@@ -1,7 +1,7 @@
 <div id="header" align="center">
     <div id="header" align="center">
         
-![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=02D9F7FF&size=35&center=true&vCenter=true&width=1000&lines=Hello!;👋👋+I'm+Neftali+Arturo+👋👋;Welcome!)
+![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=02D9F7FF&size=35&center=true&vCenter=true&width=1000&lines=👽Hello!❤️;👋👋+I'm+Neftali+Arturo+👋👋;Welcome!🛸)
         
 </div>
     <a href="https://www.facebook.com/profile.php?id=100008252550294" target="_blank">
