@@ -41,42 +41,11 @@
     </h3>
     <h1 align="left">💻 Languages and Tools I'm Familiar With</h1>
     <p align="center">
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/React-Dark.svg" width="48" title="React-Native"> 
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/HTML.svg" width="48" title="HTML"> 
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/CSS.svg" width="48" title="CSS">   
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/JavaScript.svg" width="48"  title="Javascript">   
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/TypeScript.svg" width="48" title="TypeScript">    
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Bootstrap.svg" width="48">  
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/XD.svg" width="48" title="Adobe XD">   
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Vite-Dark.svg" width="48"  title="Vite">   
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Git.svg" width="48" title="Git">  
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/MongoDB.svg" width="48" title="MongoDB">  
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/VSCode-Dark.svg" width="48" title="Vscode">   
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Github-Dark.svg" width="48" title="Github">   
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Postman.svg" width="48" title="Postman">   
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Linux-Dark.svg" width="48" title="Linux">   
-<img src="" width="48" title="">
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/NodeJS-Dark.svg" width="48" title="NodeJs">   
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Ubuntu-Dark.svg" width="48" title="Ubuntu">
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Laravel-Dark.svg" width="48" title="Laravel">  
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/PHP-Dark.svg" width="48" title="PHP">  
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/AndroidStudio-Dark.svg" width="48" title="Android Studio">  
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/MySQL-Dark.svg" width="48" title="Mysql">  
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Python-Dark.svg" width="48" title="Python"> 
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Arduino.svg" width="48" title="Arduino">  
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Pug-Dark.svg" width="48" title="Pug">  
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Java-Dark.svg" width="48" title="Java">  
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/ExpressJS-Dark.svg" width="48" title="Express.js">  
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/SQLite.svg" width="48" title="SQlite">  
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Spring-Dark.svg" width="48" title="Spring">  
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/React-Light.svg" width="48" title="React.js">  
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Anaconda-Dark.svg" width="48" title="Anaconda">  
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Npm-Dark.svg" width="48" title="NPM">  
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Yarn-Dark.svg" width="48" title="Yarn">  
-<img src="" width="48" title="">  
-<img src="" width="48" title="">  
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=react,html,css,js,ts,bootstrap,xd,vite,git,mongodb,vscode,github,postman,linux,nodejs,ubuntu,laravel,php,androidstudio,mysql,python,arduino,pug,java,express,sqlite,spring,anaconda,npm,yarn" />
+  </a>
+</p>
 
-<p/>
 </div>
 
 <div align="center">
