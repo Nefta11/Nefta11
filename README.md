@@ -81,10 +81,10 @@
 </div>
 
 <div align="center">
-    <h1>📊 Statistics</h1>
-    <div>
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nefta11&layout=compact&theme=yeblu" alt="Top Lenguajes"/>
-    </div>
+
+<h1>📊 Statistics</h1>
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Nefta11&langs_count=8&theme=yeblu)
 
 <img src="https://streak-stats.demolab.com?user=Nefta11&theme=yeblu&hide_border=FALSO&border_radius=5.0&locale=es&date_format=M%20j%5B%2C%20Y%5D&mode=weekly&exclude_days=Mon&card_width=499" alt="GitHub Streak" />
   
