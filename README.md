@@ -104,10 +104,6 @@
 <img src="https://github-contributor-stats.vercel.app/api?username=Nefta11&limit=5&theme=yeblu&combine_all_yearly_contributions=true" alt="GitHub Contributor Stats">
 </div>
 
-<div id="header" align="center">
-    <h1 align="center">💞️ Collaboration</h1>
-    <h3>I'm excited about the opportunity to collaborate on interesting and challenging projects. If you have a project you believe I could contribute to, I'll be happy to hear more about it and see how I can contribute!</h3>
-</div>
 <div align="center">
     <h1> ✍️ Random Dev Quote</h1>
 <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=merko" alt="GitHub Readme Quotes">
