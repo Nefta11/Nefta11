@@ -1,6 +1,6 @@
 <div id="header" align="center">  
     <div id="header" align="center">  
-      
+        
 ![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=02D9F7FF&size=35&center=true&vCenter=true&width=1000&lines=👽Hello!❤️;👋👋+I'm+Neftali+Arturo+👋👋;Welcome🛸+Siuu!)
 
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGMwZ3ludHQwODZhMHJ4empicWF5bWNlYTY4aTFpNmtuZHE0c2tuZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gEKz4VLX7fQlsl8SFE/giphy.gif" width="200">
