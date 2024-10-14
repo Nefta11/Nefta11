@@ -17,7 +17,13 @@
     <a href="https://twitter.com/Netf22?t=-VbupxN_bFlr5GdKrqO3RA&s=08" target="_blank">
           <img src="https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white&style=flat" alt="X Badge">
     </a>
-    <a href="mailto:neftaliarturohernandez@gmail.com" target="_blank">
+    <a href="https://www.linkedin.com/in/neftali-arturo-hern%C3%A1ndez-vergara-9996a8229/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=fff&style=flat"
+        alt="LinkedIn Badge">
+</a>
+
+     
+   <a href="mailto:neftaliarturohernandez@gmail.com" target="_blank">
         <img src="https://img.shields.io/badge/Gmail-EA4335?logo=gmail&logoColor=fff&style=flat" alt="Gmail Badge">
     </a>
 </div>
