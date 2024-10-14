@@ -6,23 +6,15 @@
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGMwZ3ludHQwODZhMHJ4empicWF5bWNlYTY4aTFpNmtuZHE0c2tuZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gEKz4VLX7fQlsl8SFE/giphy.gif" width="200">
   
 </div>
-    <a href="https://www.facebook.com/profile.php?id=100008252550294" target="_blank">  
-        <img src="https://img.shields.io/badge/Facebook-1877F2?logo=facebook&logoColor=fff&style=flat"
-            alt="Facebook Badge">
-    </a>
     <a href="https://www.instagram.com/nefth_07/" target="_blank">
         <img src="https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=fff&style=flat"
             alt="Instagram Badge">
     </a>
-    <a href="https://twitter.com/Netf22?t=-VbupxN_bFlr5GdKrqO3RA&s=08" target="_blank">
-          <img src="https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white&style=flat" alt="X Badge">
-    </a>
     <a href="https://www.linkedin.com/in/neftali-arturo-hern%C3%A1ndez-vergara-9996a8229/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=fff&style=flat"
         alt="LinkedIn Badge">
-</a>
-
-     
+     </a>
+    
    <a href="mailto:neftaliarturohernandez@gmail.com" target="_blank">
         <img src="https://img.shields.io/badge/Gmail-EA4335?logo=gmail&logoColor=fff&style=flat" alt="Gmail Badge">
     </a>
