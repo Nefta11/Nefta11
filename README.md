@@ -85,7 +85,6 @@
 
 <img src="https://streak-stats.demolab.com?user=Nefta11&theme=yeblu&hide_border=FALSO&border_radius=5.0&locale=es&date_format=M%20j%5B%2C%20Y%5D&mode=weekly&exclude_days=Mon&card_width=499" alt="GitHub Streak" />
   
-  <img src="https://github-readme-stats.vercel.app/api?username=Nefta11&show_icons=true&count_private=true&theme=yeblu" alt="GitHub Streak" />
 
 
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Nefta11&theme=yeblu" alt="GitHub Streak" />
