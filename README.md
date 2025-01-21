@@ -64,7 +64,6 @@
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/SQLite.svg" width="48" title="SQlite">  
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Spring-Dark.svg" width="48" title="Spring">  
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/React-Light.svg" width="48" title="React.js">  
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Anaconda-Dark.svg" width="48" title="Anaconda">  
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Npm-Dark.svg" width="48" title="NPM">  
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Yarn-Dark.svg" width="48" title="Yarn">  
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Astro.svg" width="48" title="">  
