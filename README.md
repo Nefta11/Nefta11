@@ -43,7 +43,7 @@
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/CSS.svg" width="48" title="CSS">   
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/JavaScript.svg" width="48"  title="Javascript">   
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/TypeScript.svg" width="48" title="TypeScript">    
-<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Bootstrap.svg" width="48">  
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Bootstrap.svg" width="48" title="Bootstrap">  
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Vite-Dark.svg" width="48"  title="Vite">   
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Git.svg" width="48" title="Git">  
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/MongoDB.svg" width="48" title="MongoDB">  
