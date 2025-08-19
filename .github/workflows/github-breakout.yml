@@ -23,11 +23,11 @@ jobs:
 
       - name: Generate Breakout SVG (Light)
         run: |
-          npx github-breakout Nefta11 ${{ secrets.GH_TOKEN }} false > breakout-light.svg
+          node node_modules/github-breakout/dist/cli.js Nefta11 ${{ secrets.GH_TOKEN }} false > breakout-light.svg
 
       - name: Generate Breakout SVG (Dark)
         run: |
-          npx github-breakout Nefta11 ${{ secrets.GH_TOKEN }} true > breakout-dark.svg
+          node node_modules/github-breakout/dist/cli.js Nefta11 ${{ secrets.GH_TOKEN }} true > breakout-dark.svg
 
       - name: Commit and push SVGs
         run: |
