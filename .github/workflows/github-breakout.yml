@@ -220,7 +220,10 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        if [ -f "advanced-cli.js" ]; then
+        if [ -f "embedded-cli.js" ]; then
+          echo "Using embedded playable generator..."
+          node embedded-cli.js ${{ github.repository_owner }} ${{ secrets.GITHUB_TOKEN }}
+        elif [ -f "advanced-cli.js" ]; then
           echo "Using advanced generator..."
           node advanced-cli.js ${{ github.repository_owner }} ${{ secrets.GITHUB_TOKEN }}
         else
