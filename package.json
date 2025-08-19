@@ -1,0 +1,22 @@
+{
+  "name": "github-breakout",
+  "version": "1.0.0",
+  "description": "Transform your GitHub contribution graph into a playable Breakout game",
+  "main": "cli.js",
+  "scripts": {
+    "start": "node cli.js",
+    "generate": "node cli.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": ["github", "breakout", "game", "contributions", "svg"],
+  "author": "Neftali Arturo",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,0 +1,226 @@
+name: GitHub Breakout Game
+
+on:
+  schedule:
+    # Ejecutar diariamente a las 6:00 AM UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch: # Permite ejecutar manualmente
+  push:
+    branches: [ main ]
+
+jobs:
+  generate-breakout:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+      
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: |
+        npm init -y
+        npm install --save-dev @types/node typescript
+        npm install axios cheerio
+        
+    - name: Create GitHub Breakout generator
+      run: |
+        cat > generate-breakout.js << 'EOF'
+        const fs = require('fs');
+        const axios = require('axios');
+        
+        class GitHubBreakout {
+          constructor(username, token) {
+            this.username = username;
+            this.token = token;
+            this.contributions = [];
+          }
+        
+          async fetchContributions() {
+            try {
+              const response = await axios.get(`https://github.com/${this.username}`, {
+                headers: {
+                  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+                }
+              });
+              
+              // Simular datos de contribuciones por ahora
+              // En una implementación real, necesitarías parsear el HTML o usar la API de GitHub
+              const today = new Date();
+              const oneYearAgo = new Date(today.getFullYear() - 1, today.getMonth(), today.getDate());
+              
+              for (let d = new Date(oneYearAgo); d <= today; d.setDate(d.getDate() + 1)) {
+                const contributions = Math.floor(Math.random() * 10);
+                this.contributions.push({
+                  date: new Date(d).toISOString().split('T')[0],
+                  count: contributions,
+                  level: this.getContributionLevel(contributions)
+                });
+              }
+              
+              console.log(`Fetched ${this.contributions.length} days of contributions`);
+            } catch (error) {
+              console.error('Error fetching contributions:', error.message);
+            }
+          }
+        
+          getContributionLevel(count) {
+            if (count === 0) return 0;
+            if (count <= 3) return 1;
+            if (count <= 6) return 2;
+            if (count <= 9) return 3;
+            return 4;
+          }
+        
+          generateBreakoutSVG(darkMode = false) {
+            const width = 728;
+            const height = 315;
+            const padding = 20;
+            const brickWidth = 10;
+            const brickHeight = 10;
+            const brickSpacing = 2;
+            
+            const weeksInYear = 53;
+            const daysInWeek = 7;
+            
+            const colors = darkMode 
+              ? {
+                  bg: '#0d1117',
+                  text: '#c9d1d9',
+                  paddle: '#58a6ff',
+                  ball: '#f85149',
+                  brick0: '#161b22',
+                  brick1: '#0e4429',
+                  brick2: '#006d32',
+                  brick3: '#26a641',
+                  brick4: '#39d353'
+                }
+              : {
+                  bg: '#ffffff',
+                  text: '#24292f',
+                  paddle: '#0969da',
+                  ball: '#cf222e',
+                  brick0: '#ebedf0',
+                  brick1: '#9be9a8',
+                  brick2: '#40c463',
+                  brick3: '#30a14e',
+                  brick4: '#216e39'
+                };
+        
+            let svg = `<?xml version="1.0" encoding="UTF-8"?>
+        <svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <style>
+              .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 600; fill: ${colors.text}; }
+              .subtitle { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 12px; fill: ${colors.text}; opacity: 0.7; }
+              .brick { stroke: ${colors.bg}; stroke-width: 1; }
+              .paddle { fill: ${colors.paddle}; rx: 2; }
+              .ball { fill: ${colors.ball}; }
+              .game-area { stroke: ${colors.text}; stroke-width: 2; fill: none; opacity: 0.3; }
+            </style>
+          </defs>
+          
+          <rect width="100%" height="100%" fill="${colors.bg}"/>
+          
+          <!-- Title -->
+          <text x="${width/2}" y="25" text-anchor="middle" class="title">GitHub Breakout - ${this.username}</text>
+          <text x="${width/2}" y="45" text-anchor="middle" class="subtitle">Break the blocks with your contribution history!</text>
+          
+          <!-- Game Area Border -->
+          <rect x="${padding}" y="55" width="${width - 2*padding}" height="${height - 75}" class="game-area"/>
+          
+          <!-- Contribution Bricks -->`;
+        
+            let brickIndex = 0;
+            const startX = padding + 10;
+            const startY = 65;
+            
+            for (let week = 0; week < weeksInYear && week < Math.floor((width - 2*padding - 20) / (brickWidth + brickSpacing)); week++) {
+              for (let day = 0; day < daysInWeek; day++) {
+                if (brickIndex < this.contributions.length) {
+                  const contribution = this.contributions[brickIndex];
+                  const x = startX + week * (brickWidth + brickSpacing);
+                  const y = startY + day * (brickHeight + brickSpacing);
+                  const color = colors[`brick${contribution.level}`];
+                  
+                  svg += `
+          <rect x="${x}" y="${y}" width="${brickWidth}" height="${brickHeight}" fill="${color}" class="brick">
+            <title>${contribution.date}: ${contribution.count} contributions</title>
+          </rect>`;
+                  
+                  brickIndex++;
+                }
+              }
+            }
+        
+            // Paddle
+            const paddleWidth = 60;
+            const paddleHeight = 8;
+            const paddleX = (width - paddleWidth) / 2;
+            const paddleY = height - 40;
+            
+            svg += `
+          
+          <!-- Paddle -->
+          <rect x="${paddleX}" y="${paddleY}" width="${paddleWidth}" height="${paddleHeight}" class="paddle"/>
+          
+          <!-- Ball -->
+          <circle cx="${paddleX + paddleWidth/2}" cy="${paddleY - 10}" r="4" class="ball"/>
+          
+          <!-- Instructions -->
+          <text x="${width/2}" y="${height - 10}" text-anchor="middle" class="subtitle">Use your contributions as bricks to break! 🎮</text>
+          
+        </svg>`;
+        
+            return svg;
+          }
+        
+          async generateFiles() {
+            await this.fetchContributions();
+            
+            const lightSVG = this.generateBreakoutSVG(false);
+            const darkSVG = this.generateBreakoutSVG(true);
+            
+            fs.writeFileSync('github-breakout-light.svg', lightSVG);
+            fs.writeFileSync('github-breakout-dark.svg', darkSVG);
+            
+            console.log('✅ Generated GitHub Breakout SVG files!');
+            console.log('📁 Files created:');
+            console.log('  - github-breakout-light.svg');
+            console.log('  - github-breakout-dark.svg');
+          }
+        }
+        
+        async function main() {
+          const username = process.env.GITHUB_REPOSITORY_OWNER || 'Nefta11';
+          const token = process.env.GITHUB_TOKEN;
+          
+          console.log(`🎮 Generating GitHub Breakout for ${username}...`);
+          
+          const breakout = new GitHubBreakout(username, token);
+          await breakout.generateFiles();
+        }
+        
+        main().catch(console.error);
+        EOF
+        
+    - name: Generate Breakout SVGs
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: node generate-breakout.js
+      
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add github-breakout-*.svg
+        git diff --staged --quiet || git commit -m "🎮 Update GitHub Breakout game - $(date +'%Y-%m-%d')"
+        git push

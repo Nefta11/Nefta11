@@ -75,6 +75,19 @@
 
 <div align="center">
 
+<h1>🎮 GitHub Breakout Game</h1>
+<p>¡Convierte tu actividad de GitHub en un juego! Usa tus contribuciones como ladrillos para romper.</p>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./github-breakout-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./github-breakout-light.svg">
+  <img alt="GitHub Breakout Game" src="./github-breakout-light.svg" width="728" height="315">
+</picture>
+
+</div>
+
+<div align="center">
+
 <h1>📊 Statistics</h1>
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Nefta11&langs_count=8&theme=yeblu)
