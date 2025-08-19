@@ -17,9 +17,9 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
+      - name: Install github-breakout globally
         run: |
-          npm install --save git+ssh://git@github.com:cyprieng/github-breakout.git
+          npm install -g github-breakout
 
       - name: Generate Breakout SVG (Light)
         run: |
