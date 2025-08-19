@@ -17,10 +17,12 @@
       .brick { 
         stroke: #ffffff; 
         stroke-width: 1; 
-        transition: opacity 0.2s ease;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        cursor: pointer;
       }
       .brick:hover { 
         opacity: 0.8; 
+        transform: scale(1.1);
       }
       .paddle { 
         fill: #0969da; 
@@ -30,6 +32,11 @@
       .ball { 
         fill: #cf222e; 
         filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+        animation: bounce 2s ease-in-out infinite;
+      }
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-5px); }
       }
       .game-area { 
         stroke: #d0d7de; 
@@ -44,7 +51,34 @@
         fill: #24292f; 
         opacity: 0.6; 
       }
+      .play-button {
+        fill: #0969da;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .play-button:hover {
+        fill: #cf222e;
+        transform: scale(1.1);
+      }
+      .play-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; 
+        font-size: 12px; 
+        fill: white; 
+        font-weight: 600;
+        pointer-events: none;
+      }
     </style>
+    <script type="text/javascript">
+      <![CDATA[
+        function playGame() {
+          window.open('./game.html', '_blank', 'width=900,height=700');
+        }
+        
+        function showContribution(date, count) {
+          alert('📅 ' + date + '\n🔥 ' + count + ' contribuciones\n\n¡Haz clic en "Jugar" para romper este ladrillo!');
+        }
+      ]]>
+    </script>
   </defs>
   
   <rect width="100%" height="100%" fill="#ffffff" rx="12"/>
@@ -54,1119 +88,1853 @@
   <text x="364" y="45" text-anchor="middle" class="subtitle">¡Rompe los ladrillos con tu historial de contribuciones!</text>
   
   <!-- Game Area Border -->
-  <rect x="20" y="55" width="688" height="240" class="game-area"/>
-  
-  <!-- Contribution Bricks -->
-  <rect x="35" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-08-18: 0 contribuciones</title>
-  </rect>
-  <rect x="35" y="82" width="10" height="10" fill="#40c463" class="brick">
-    <title>2024-08-19: 3 contribuciones</title>
-  </rect>
-  <rect x="35" y="94" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-08-20: 7 contribuciones</title>
-  </rect>
-  <rect x="35" y="106" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-08-21: 2 contribuciones</title>
-  </rect>
-  <rect x="35" y="118" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-08-22: 0 contribuciones</title>
-  </rect>
-  <rect x="35" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-08-23: 0 contribuciones</title>
-  </rect>
-  <rect x="35" y="142" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-08-24: 1 contribuciones</title>
-  </rect>
-  <rect x="47" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-08-25: 1 contribuciones</title>
-  </rect>
-  <rect x="47" y="82" width="10" height="10" fill="#40c463" class="brick">
-    <title>2024-08-26: 4 contribuciones</title>
-  </rect>
-  <rect x="47" y="94" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-08-27: 1 contribuciones</title>
-  </rect>
-  <rect x="47" y="106" width="10" height="10" fill="#40c463" class="brick">
-    <title>2024-08-28: 4 contribuciones</title>
-  </rect>
-  <rect x="47" y="118" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-08-29: 2 contribuciones</title>
-  </rect>
-  <rect x="47" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-08-30: 0 contribuciones</title>
-  </rect>
-  <rect x="47" y="142" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-08-31: 1 contribuciones</title>
-  </rect>
-  <rect x="59" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-09-01: 2 contribuciones</title>
-  </rect>
-  <rect x="59" y="82" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-09-02: 0 contribuciones</title>
-  </rect>
-  <rect x="59" y="94" width="10" height="10" fill="#40c463" class="brick">
-    <title>2024-09-03: 4 contribuciones</title>
-  </rect>
-  <rect x="59" y="106" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-09-04: 0 contribuciones</title>
-  </rect>
-  <rect x="59" y="118" width="10" height="10" fill="#40c463" class="brick">
-    <title>2024-09-05: 3 contribuciones</title>
-  </rect>
-  <rect x="59" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-09-06: 0 contribuciones</title>
-  </rect>
-  <rect x="59" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-09-07: 0 contribuciones</title>
-  </rect>
-  <rect x="71" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-09-08: 0 contribuciones</title>
-  </rect>
-  <rect x="71" y="82" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-09-09: 6 contribuciones</title>
-  </rect>
-  <rect x="71" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-09-10: 0 contribuciones</title>
-  </rect>
-  <rect x="71" y="106" width="10" height="10" fill="#40c463" class="brick">
-    <title>2024-09-11: 3 contribuciones</title>
-  </rect>
-  <rect x="71" y="118" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-09-12: 0 contribuciones</title>
-  </rect>
-  <rect x="71" y="130" width="10" height="10" fill="#40c463" class="brick">
-    <title>2024-09-13: 3 contribuciones</title>
-  </rect>
-  <rect x="71" y="142" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-09-14: 1 contribuciones</title>
-  </rect>
-  <rect x="83" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-09-15: 0 contribuciones</title>
-  </rect>
-  <rect x="83" y="82" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-09-16: 0 contribuciones</title>
-  </rect>
-  <rect x="83" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-09-17: 0 contribuciones</title>
-  </rect>
-  <rect x="83" y="106" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-09-18: 7 contribuciones</title>
-  </rect>
-  <rect x="83" y="118" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-09-19: 7 contribuciones</title>
-  </rect>
-  <rect x="83" y="130" width="10" height="10" fill="#40c463" class="brick">
-    <title>2024-09-20: 3 contribuciones</title>
-  </rect>
-  <rect x="83" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-09-21: 0 contribuciones</title>
-  </rect>
-  <rect x="95" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-09-22: 2 contribuciones</title>
-  </rect>
-  <rect x="95" y="82" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-09-23: 7 contribuciones</title>
-  </rect>
-  <rect x="95" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-09-24: 0 contribuciones</title>
-  </rect>
-  <rect x="95" y="106" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-09-25: 1 contribuciones</title>
-  </rect>
-  <rect x="95" y="118" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-09-26: 1 contribuciones</title>
-  </rect>
-  <rect x="95" y="130" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-09-27: 1 contribuciones</title>
-  </rect>
-  <rect x="95" y="142" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-09-28: 1 contribuciones</title>
-  </rect>
-  <rect x="107" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-09-29: 1 contribuciones</title>
-  </rect>
-  <rect x="107" y="82" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-09-30: 0 contribuciones</title>
-  </rect>
-  <rect x="107" y="94" width="10" height="10" fill="#40c463" class="brick">
-    <title>2024-10-01: 3 contribuciones</title>
-  </rect>
-  <rect x="107" y="106" width="10" height="10" fill="#40c463" class="brick">
-    <title>2024-10-02: 3 contribuciones</title>
-  </rect>
-  <rect x="107" y="118" width="10" height="10" fill="#40c463" class="brick">
-    <title>2024-10-03: 4 contribuciones</title>
-  </rect>
-  <rect x="107" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-10-04: 0 contribuciones</title>
-  </rect>
-  <rect x="107" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-10-05: 0 contribuciones</title>
-  </rect>
-  <rect x="119" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-10-06: 2 contribuciones</title>
-  </rect>
-  <rect x="119" y="82" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-10-07: 6 contribuciones</title>
-  </rect>
-  <rect x="119" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-10-08: 0 contribuciones</title>
-  </rect>
-  <rect x="119" y="106" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-10-09: 0 contribuciones</title>
-  </rect>
-  <rect x="119" y="118" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-10-10: 0 contribuciones</title>
-  </rect>
-  <rect x="119" y="130" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-10-11: 2 contribuciones</title>
-  </rect>
-  <rect x="119" y="142" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-10-12: 1 contribuciones</title>
-  </rect>
-  <rect x="131" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-10-13: 0 contribuciones</title>
-  </rect>
-  <rect x="131" y="82" width="10" height="10" fill="#40c463" class="brick">
-    <title>2024-10-14: 3 contribuciones</title>
-  </rect>
-  <rect x="131" y="94" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-10-15: 1 contribuciones</title>
-  </rect>
-  <rect x="131" y="106" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-10-16: 0 contribuciones</title>
-  </rect>
-  <rect x="131" y="118" width="10" height="10" fill="#40c463" class="brick">
-    <title>2024-10-17: 4 contribuciones</title>
-  </rect>
-  <rect x="131" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-10-18: 0 contribuciones</title>
-  </rect>
-  <rect x="131" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-10-19: 0 contribuciones</title>
-  </rect>
-  <rect x="143" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-10-20: 0 contribuciones</title>
-  </rect>
-  <rect x="143" y="82" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-10-21: 7 contribuciones</title>
-  </rect>
-  <rect x="143" y="94" width="10" height="10" fill="#40c463" class="brick">
-    <title>2024-10-22: 3 contribuciones</title>
-  </rect>
-  <rect x="143" y="106" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-10-23: 0 contribuciones</title>
-  </rect>
-  <rect x="143" y="118" width="10" height="10" fill="#40c463" class="brick">
-    <title>2024-10-24: 4 contribuciones</title>
-  </rect>
-  <rect x="143" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-10-25: 0 contribuciones</title>
-  </rect>
-  <rect x="143" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-10-26: 0 contribuciones</title>
-  </rect>
-  <rect x="155" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-10-27: 0 contribuciones</title>
-  </rect>
-  <rect x="155" y="82" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-10-28: 6 contribuciones</title>
-  </rect>
-  <rect x="155" y="94" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-10-29: 7 contribuciones</title>
-  </rect>
-  <rect x="155" y="106" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-10-30: 5 contribuciones</title>
-  </rect>
-  <rect x="155" y="118" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-10-31: 2 contribuciones</title>
-  </rect>
-  <rect x="155" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-11-01: 0 contribuciones</title>
-  </rect>
-  <rect x="155" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-11-02: 0 contribuciones</title>
-  </rect>
-  <rect x="167" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-11-03: 0 contribuciones</title>
-  </rect>
-  <rect x="167" y="82" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-11-04: 6 contribuciones</title>
-  </rect>
-  <rect x="167" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-11-05: 0 contribuciones</title>
-  </rect>
-  <rect x="167" y="106" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-11-06: 7 contribuciones</title>
-  </rect>
-  <rect x="167" y="118" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-11-07: 2 contribuciones</title>
-  </rect>
-  <rect x="167" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-11-08: 0 contribuciones</title>
-  </rect>
-  <rect x="167" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-11-09: 0 contribuciones</title>
-  </rect>
-  <rect x="179" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-11-10: 0 contribuciones</title>
-  </rect>
-  <rect x="179" y="82" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-11-11: 7 contribuciones</title>
-  </rect>
-  <rect x="179" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-11-12: 0 contribuciones</title>
-  </rect>
-  <rect x="179" y="106" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-11-13: 1 contribuciones</title>
-  </rect>
-  <rect x="179" y="118" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-11-14: 7 contribuciones</title>
-  </rect>
-  <rect x="179" y="130" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-11-15: 5 contribuciones</title>
-  </rect>
-  <rect x="179" y="142" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-11-16: 2 contribuciones</title>
-  </rect>
-  <rect x="191" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-11-17: 1 contribuciones</title>
-  </rect>
-  <rect x="191" y="82" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-11-18: 1 contribuciones</title>
-  </rect>
-  <rect x="191" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-11-19: 0 contribuciones</title>
-  </rect>
-  <rect x="191" y="106" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-11-20: 6 contribuciones</title>
-  </rect>
-  <rect x="191" y="118" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-11-21: 0 contribuciones</title>
-  </rect>
-  <rect x="191" y="130" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-11-22: 6 contribuciones</title>
-  </rect>
-  <rect x="191" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-11-23: 0 contribuciones</title>
-  </rect>
-  <rect x="203" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-11-24: 1 contribuciones</title>
-  </rect>
-  <rect x="203" y="82" width="10" height="10" fill="#40c463" class="brick">
-    <title>2024-11-25: 4 contribuciones</title>
-  </rect>
-  <rect x="203" y="94" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-11-26: 2 contribuciones</title>
-  </rect>
-  <rect x="203" y="106" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-11-27: 0 contribuciones</title>
-  </rect>
-  <rect x="203" y="118" width="10" height="10" fill="#40c463" class="brick">
-    <title>2024-11-28: 4 contribuciones</title>
-  </rect>
-  <rect x="203" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-11-29: 0 contribuciones</title>
-  </rect>
-  <rect x="203" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-11-30: 0 contribuciones</title>
-  </rect>
-  <rect x="215" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-12-01: 0 contribuciones</title>
-  </rect>
-  <rect x="215" y="82" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-12-02: 0 contribuciones</title>
-  </rect>
-  <rect x="215" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-12-03: 0 contribuciones</title>
-  </rect>
-  <rect x="215" y="106" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-12-04: 5 contribuciones</title>
-  </rect>
-  <rect x="215" y="118" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-12-05: 1 contribuciones</title>
-  </rect>
-  <rect x="215" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-12-06: 0 contribuciones</title>
-  </rect>
-  <rect x="215" y="142" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-12-07: 2 contribuciones</title>
-  </rect>
-  <rect x="227" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-12-08: 0 contribuciones</title>
-  </rect>
-  <rect x="227" y="82" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-12-09: 5 contribuciones</title>
-  </rect>
-  <rect x="227" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-12-10: 0 contribuciones</title>
-  </rect>
-  <rect x="227" y="106" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-12-11: 0 contribuciones</title>
-  </rect>
-  <rect x="227" y="118" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-12-12: 5 contribuciones</title>
-  </rect>
-  <rect x="227" y="130" width="10" height="10" fill="#40c463" class="brick">
-    <title>2024-12-13: 4 contribuciones</title>
-  </rect>
-  <rect x="227" y="142" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-12-14: 2 contribuciones</title>
-  </rect>
-  <rect x="239" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-12-15: 0 contribuciones</title>
-  </rect>
-  <rect x="239" y="82" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-12-16: 0 contribuciones</title>
-  </rect>
-  <rect x="239" y="94" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-12-17: 6 contribuciones</title>
-  </rect>
-  <rect x="239" y="106" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-12-18: 0 contribuciones</title>
-  </rect>
-  <rect x="239" y="118" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-12-19: 5 contribuciones</title>
-  </rect>
-  <rect x="239" y="130" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-12-20: 6 contribuciones</title>
-  </rect>
-  <rect x="239" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-12-21: 0 contribuciones</title>
-  </rect>
-  <rect x="251" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2024-12-22: 2 contribuciones</title>
-  </rect>
-  <rect x="251" y="82" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-12-23: 6 contribuciones</title>
-  </rect>
-  <rect x="251" y="94" width="10" height="10" fill="#40c463" class="brick">
-    <title>2024-12-24: 3 contribuciones</title>
-  </rect>
-  <rect x="251" y="106" width="10" height="10" fill="#40c463" class="brick">
-    <title>2024-12-25: 3 contribuciones</title>
-  </rect>
-  <rect x="251" y="118" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-12-26: 5 contribuciones</title>
-  </rect>
-  <rect x="251" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-12-27: 0 contribuciones</title>
-  </rect>
-  <rect x="251" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-12-28: 0 contribuciones</title>
-  </rect>
-  <rect x="263" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-12-29: 0 contribuciones</title>
-  </rect>
-  <rect x="263" y="82" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2024-12-30: 0 contribuciones</title>
-  </rect>
-  <rect x="263" y="94" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2024-12-31: 7 contribuciones</title>
-  </rect>
-  <rect x="263" y="106" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-01-01: 4 contribuciones</title>
-  </rect>
-  <rect x="263" y="118" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-01-02: 0 contribuciones</title>
-  </rect>
-  <rect x="263" y="130" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-01-03: 4 contribuciones</title>
-  </rect>
-  <rect x="263" y="142" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-01-04: 1 contribuciones</title>
-  </rect>
-  <rect x="275" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-01-05: 0 contribuciones</title>
-  </rect>
-  <rect x="275" y="82" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-01-06: 2 contribuciones</title>
-  </rect>
-  <rect x="275" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-01-07: 0 contribuciones</title>
-  </rect>
-  <rect x="275" y="106" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-01-08: 4 contribuciones</title>
-  </rect>
-  <rect x="275" y="118" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-01-09: 7 contribuciones</title>
-  </rect>
-  <rect x="275" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-01-10: 0 contribuciones</title>
-  </rect>
-  <rect x="275" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-01-11: 0 contribuciones</title>
-  </rect>
-  <rect x="287" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-01-12: 1 contribuciones</title>
-  </rect>
-  <rect x="287" y="82" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-01-13: 5 contribuciones</title>
-  </rect>
-  <rect x="287" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-01-14: 0 contribuciones</title>
-  </rect>
-  <rect x="287" y="106" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-01-15: 6 contribuciones</title>
-  </rect>
-  <rect x="287" y="118" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-01-16: 7 contribuciones</title>
-  </rect>
-  <rect x="287" y="130" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-01-17: 1 contribuciones</title>
-  </rect>
-  <rect x="287" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-01-18: 0 contribuciones</title>
-  </rect>
-  <rect x="299" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-01-19: 1 contribuciones</title>
-  </rect>
-  <rect x="299" y="82" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-01-20: 4 contribuciones</title>
-  </rect>
-  <rect x="299" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-01-21: 0 contribuciones</title>
-  </rect>
-  <rect x="299" y="106" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-01-22: 4 contribuciones</title>
-  </rect>
-  <rect x="299" y="118" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-01-23: 4 contribuciones</title>
-  </rect>
-  <rect x="299" y="130" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-01-24: 6 contribuciones</title>
-  </rect>
-  <rect x="299" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-01-25: 0 contribuciones</title>
-  </rect>
-  <rect x="311" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-01-26: 0 contribuciones</title>
-  </rect>
-  <rect x="311" y="82" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-01-27: 3 contribuciones</title>
-  </rect>
-  <rect x="311" y="94" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-01-28: 7 contribuciones</title>
-  </rect>
-  <rect x="311" y="106" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-01-29: 3 contribuciones</title>
-  </rect>
-  <rect x="311" y="118" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-01-30: 1 contribuciones</title>
-  </rect>
-  <rect x="311" y="130" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-01-31: 5 contribuciones</title>
-  </rect>
-  <rect x="311" y="142" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-02-01: 2 contribuciones</title>
-  </rect>
-  <rect x="323" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-02-02: 2 contribuciones</title>
-  </rect>
-  <rect x="323" y="82" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-02-03: 1 contribuciones</title>
-  </rect>
-  <rect x="323" y="94" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-02-04: 3 contribuciones</title>
-  </rect>
-  <rect x="323" y="106" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-02-05: 5 contribuciones</title>
-  </rect>
-  <rect x="323" y="118" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-02-06: 1 contribuciones</title>
-  </rect>
-  <rect x="323" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-02-07: 0 contribuciones</title>
-  </rect>
-  <rect x="323" y="142" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-02-08: 2 contribuciones</title>
-  </rect>
-  <rect x="335" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-02-09: 0 contribuciones</title>
-  </rect>
-  <rect x="335" y="82" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-02-10: 1 contribuciones</title>
-  </rect>
-  <rect x="335" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-02-11: 0 contribuciones</title>
-  </rect>
-  <rect x="335" y="106" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-02-12: 7 contribuciones</title>
-  </rect>
-  <rect x="335" y="118" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-02-13: 1 contribuciones</title>
-  </rect>
-  <rect x="335" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-02-14: 0 contribuciones</title>
-  </rect>
-  <rect x="335" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-02-15: 0 contribuciones</title>
-  </rect>
-  <rect x="347" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-02-16: 1 contribuciones</title>
-  </rect>
-  <rect x="347" y="82" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-02-17: 4 contribuciones</title>
-  </rect>
-  <rect x="347" y="94" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-02-18: 5 contribuciones</title>
-  </rect>
-  <rect x="347" y="106" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-02-19: 2 contribuciones</title>
-  </rect>
-  <rect x="347" y="118" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-02-20: 3 contribuciones</title>
-  </rect>
-  <rect x="347" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-02-21: 0 contribuciones</title>
-  </rect>
-  <rect x="347" y="142" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-02-22: 1 contribuciones</title>
-  </rect>
-  <rect x="359" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-02-23: 0 contribuciones</title>
-  </rect>
-  <rect x="359" y="82" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-02-24: 0 contribuciones</title>
-  </rect>
-  <rect x="359" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-02-25: 0 contribuciones</title>
-  </rect>
-  <rect x="359" y="106" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-02-26: 6 contribuciones</title>
-  </rect>
-  <rect x="359" y="118" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-02-27: 2 contribuciones</title>
-  </rect>
-  <rect x="359" y="130" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-02-28: 6 contribuciones</title>
-  </rect>
-  <rect x="359" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-03-01: 0 contribuciones</title>
-  </rect>
-  <rect x="371" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-03-02: 2 contribuciones</title>
-  </rect>
-  <rect x="371" y="82" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-03-03: 3 contribuciones</title>
-  </rect>
-  <rect x="371" y="94" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-03-04: 7 contribuciones</title>
-  </rect>
-  <rect x="371" y="106" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-03-05: 1 contribuciones</title>
-  </rect>
-  <rect x="371" y="118" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-03-06: 5 contribuciones</title>
-  </rect>
-  <rect x="371" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-03-07: 0 contribuciones</title>
-  </rect>
-  <rect x="371" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-03-08: 0 contribuciones</title>
-  </rect>
-  <rect x="383" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-03-09: 1 contribuciones</title>
-  </rect>
-  <rect x="383" y="82" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-03-10: 5 contribuciones</title>
-  </rect>
-  <rect x="383" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-03-11: 0 contribuciones</title>
-  </rect>
-  <rect x="383" y="106" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-03-12: 0 contribuciones</title>
-  </rect>
-  <rect x="383" y="118" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-03-13: 3 contribuciones</title>
-  </rect>
-  <rect x="383" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-03-14: 0 contribuciones</title>
-  </rect>
-  <rect x="383" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-03-15: 0 contribuciones</title>
-  </rect>
-  <rect x="395" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-03-16: 2 contribuciones</title>
-  </rect>
-  <rect x="395" y="82" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-03-17: 2 contribuciones</title>
-  </rect>
-  <rect x="395" y="94" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-03-18: 5 contribuciones</title>
-  </rect>
-  <rect x="395" y="106" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-03-19: 0 contribuciones</title>
-  </rect>
-  <rect x="395" y="118" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-03-20: 0 contribuciones</title>
-  </rect>
-  <rect x="395" y="130" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-03-21: 6 contribuciones</title>
-  </rect>
-  <rect x="395" y="142" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-03-22: 1 contribuciones</title>
-  </rect>
-  <rect x="407" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-03-23: 2 contribuciones</title>
-  </rect>
-  <rect x="407" y="82" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-03-24: 5 contribuciones</title>
-  </rect>
-  <rect x="407" y="94" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-03-25: 1 contribuciones</title>
-  </rect>
-  <rect x="407" y="106" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-03-26: 7 contribuciones</title>
-  </rect>
-  <rect x="407" y="118" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-03-27: 0 contribuciones</title>
-  </rect>
-  <rect x="407" y="130" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-03-28: 3 contribuciones</title>
-  </rect>
-  <rect x="407" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-03-29: 0 contribuciones</title>
-  </rect>
-  <rect x="419" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-03-30: 1 contribuciones</title>
-  </rect>
-  <rect x="419" y="82" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-03-31: 0 contribuciones</title>
-  </rect>
-  <rect x="419" y="94" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-04-01: 3 contribuciones</title>
-  </rect>
-  <rect x="419" y="106" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-04-02: 1 contribuciones</title>
-  </rect>
-  <rect x="419" y="118" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-04-03: 3 contribuciones</title>
-  </rect>
-  <rect x="419" y="130" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-04-04: 2 contribuciones</title>
-  </rect>
-  <rect x="419" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-04-05: 0 contribuciones</title>
-  </rect>
-  <rect x="431" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-04-06: 0 contribuciones</title>
-  </rect>
-  <rect x="431" y="82" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-04-07: 0 contribuciones</title>
-  </rect>
-  <rect x="431" y="94" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-04-08: 7 contribuciones</title>
-  </rect>
-  <rect x="431" y="106" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-04-09: 7 contribuciones</title>
-  </rect>
-  <rect x="431" y="118" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-04-10: 4 contribuciones</title>
-  </rect>
-  <rect x="431" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-04-11: 0 contribuciones</title>
-  </rect>
-  <rect x="431" y="142" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-04-12: 2 contribuciones</title>
-  </rect>
-  <rect x="443" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-04-13: 0 contribuciones</title>
-  </rect>
-  <rect x="443" y="82" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-04-14: 6 contribuciones</title>
-  </rect>
-  <rect x="443" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-04-15: 0 contribuciones</title>
-  </rect>
-  <rect x="443" y="106" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-04-16: 0 contribuciones</title>
-  </rect>
-  <rect x="443" y="118" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-04-17: 0 contribuciones</title>
-  </rect>
-  <rect x="443" y="130" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-04-18: 6 contribuciones</title>
-  </rect>
-  <rect x="443" y="142" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-04-19: 1 contribuciones</title>
-  </rect>
-  <rect x="455" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-04-20: 1 contribuciones</title>
-  </rect>
-  <rect x="455" y="82" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-04-21: 0 contribuciones</title>
-  </rect>
-  <rect x="455" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-04-22: 0 contribuciones</title>
-  </rect>
-  <rect x="455" y="106" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-04-23: 4 contribuciones</title>
-  </rect>
-  <rect x="455" y="118" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-04-24: 0 contribuciones</title>
-  </rect>
-  <rect x="455" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-04-25: 0 contribuciones</title>
-  </rect>
-  <rect x="455" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-04-26: 0 contribuciones</title>
-  </rect>
-  <rect x="467" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-04-27: 0 contribuciones</title>
-  </rect>
-  <rect x="467" y="82" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-04-28: 0 contribuciones</title>
-  </rect>
-  <rect x="467" y="94" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-04-29: 4 contribuciones</title>
-  </rect>
-  <rect x="467" y="106" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-04-30: 0 contribuciones</title>
-  </rect>
-  <rect x="467" y="118" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-05-01: 0 contribuciones</title>
-  </rect>
-  <rect x="467" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-05-02: 0 contribuciones</title>
-  </rect>
-  <rect x="467" y="142" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-05-03: 1 contribuciones</title>
-  </rect>
-  <rect x="479" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-05-04: 2 contribuciones</title>
-  </rect>
-  <rect x="479" y="82" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-05-05: 0 contribuciones</title>
-  </rect>
-  <rect x="479" y="94" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-05-06: 1 contribuciones</title>
-  </rect>
-  <rect x="479" y="106" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-05-07: 1 contribuciones</title>
-  </rect>
-  <rect x="479" y="118" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-05-08: 0 contribuciones</title>
-  </rect>
-  <rect x="479" y="130" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-05-09: 7 contribuciones</title>
-  </rect>
-  <rect x="479" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-05-10: 0 contribuciones</title>
-  </rect>
-  <rect x="491" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-05-11: 2 contribuciones</title>
-  </rect>
-  <rect x="491" y="82" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-05-12: 2 contribuciones</title>
-  </rect>
-  <rect x="491" y="94" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-05-13: 3 contribuciones</title>
-  </rect>
-  <rect x="491" y="106" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-05-14: 2 contribuciones</title>
-  </rect>
-  <rect x="491" y="118" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-05-15: 0 contribuciones</title>
-  </rect>
-  <rect x="491" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-05-16: 0 contribuciones</title>
-  </rect>
-  <rect x="491" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-05-17: 0 contribuciones</title>
-  </rect>
-  <rect x="503" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-05-18: 2 contribuciones</title>
-  </rect>
-  <rect x="503" y="82" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-05-19: 5 contribuciones</title>
-  </rect>
-  <rect x="503" y="94" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-05-20: 7 contribuciones</title>
-  </rect>
-  <rect x="503" y="106" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-05-21: 0 contribuciones</title>
-  </rect>
-  <rect x="503" y="118" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-05-22: 6 contribuciones</title>
-  </rect>
-  <rect x="503" y="130" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-05-23: 6 contribuciones</title>
-  </rect>
-  <rect x="503" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-05-24: 0 contribuciones</title>
-  </rect>
-  <rect x="515" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-05-25: 1 contribuciones</title>
-  </rect>
-  <rect x="515" y="82" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-05-26: 0 contribuciones</title>
-  </rect>
-  <rect x="515" y="94" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-05-27: 3 contribuciones</title>
-  </rect>
-  <rect x="515" y="106" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-05-28: 7 contribuciones</title>
-  </rect>
-  <rect x="515" y="118" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-05-29: 0 contribuciones</title>
-  </rect>
-  <rect x="515" y="130" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-05-30: 3 contribuciones</title>
-  </rect>
-  <rect x="515" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-05-31: 0 contribuciones</title>
-  </rect>
-  <rect x="527" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-06-01: 0 contribuciones</title>
-  </rect>
-  <rect x="527" y="82" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-06-02: 0 contribuciones</title>
-  </rect>
-  <rect x="527" y="94" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-06-03: 1 contribuciones</title>
-  </rect>
-  <rect x="527" y="106" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-06-04: 1 contribuciones</title>
-  </rect>
-  <rect x="527" y="118" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-06-05: 7 contribuciones</title>
-  </rect>
-  <rect x="527" y="130" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-06-06: 1 contribuciones</title>
-  </rect>
-  <rect x="527" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-06-07: 0 contribuciones</title>
-  </rect>
-  <rect x="539" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-06-08: 1 contribuciones</title>
-  </rect>
-  <rect x="539" y="82" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-06-09: 7 contribuciones</title>
-  </rect>
-  <rect x="539" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-06-10: 0 contribuciones</title>
-  </rect>
-  <rect x="539" y="106" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-06-11: 0 contribuciones</title>
-  </rect>
-  <rect x="539" y="118" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-06-12: 1 contribuciones</title>
-  </rect>
-  <rect x="539" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-06-13: 0 contribuciones</title>
-  </rect>
-  <rect x="539" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-06-14: 0 contribuciones</title>
-  </rect>
-  <rect x="551" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-06-15: 0 contribuciones</title>
-  </rect>
-  <rect x="551" y="82" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-06-16: 3 contribuciones</title>
-  </rect>
-  <rect x="551" y="94" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-06-17: 4 contribuciones</title>
-  </rect>
-  <rect x="551" y="106" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-06-18: 0 contribuciones</title>
-  </rect>
-  <rect x="551" y="118" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-06-19: 0 contribuciones</title>
-  </rect>
-  <rect x="551" y="130" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-06-20: 3 contribuciones</title>
-  </rect>
-  <rect x="551" y="142" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-06-21: 2 contribuciones</title>
-  </rect>
-  <rect x="563" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-06-22: 0 contribuciones</title>
-  </rect>
-  <rect x="563" y="82" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-06-23: 0 contribuciones</title>
-  </rect>
-  <rect x="563" y="94" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-06-24: 3 contribuciones</title>
-  </rect>
-  <rect x="563" y="106" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-06-25: 4 contribuciones</title>
-  </rect>
-  <rect x="563" y="118" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-06-26: 0 contribuciones</title>
-  </rect>
-  <rect x="563" y="130" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-06-27: 7 contribuciones</title>
-  </rect>
-  <rect x="563" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-06-28: 0 contribuciones</title>
-  </rect>
-  <rect x="575" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-06-29: 0 contribuciones</title>
-  </rect>
-  <rect x="575" y="82" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-06-30: 0 contribuciones</title>
-  </rect>
-  <rect x="575" y="94" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-07-01: 2 contribuciones</title>
-  </rect>
-  <rect x="575" y="106" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-07-02: 7 contribuciones</title>
-  </rect>
-  <rect x="575" y="118" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-07-03: 4 contribuciones</title>
-  </rect>
-  <rect x="575" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-07-04: 0 contribuciones</title>
-  </rect>
-  <rect x="575" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-07-05: 0 contribuciones</title>
-  </rect>
-  <rect x="587" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-07-06: 0 contribuciones</title>
-  </rect>
-  <rect x="587" y="82" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-07-07: 0 contribuciones</title>
-  </rect>
-  <rect x="587" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-07-08: 0 contribuciones</title>
-  </rect>
-  <rect x="587" y="106" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-07-09: 7 contribuciones</title>
-  </rect>
-  <rect x="587" y="118" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-07-10: 0 contribuciones</title>
-  </rect>
-  <rect x="587" y="130" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-07-11: 5 contribuciones</title>
-  </rect>
-  <rect x="587" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-07-12: 0 contribuciones</title>
-  </rect>
-  <rect x="599" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-07-13: 0 contribuciones</title>
-  </rect>
-  <rect x="599" y="82" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-07-14: 0 contribuciones</title>
-  </rect>
-  <rect x="599" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-07-15: 0 contribuciones</title>
-  </rect>
-  <rect x="599" y="106" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-07-16: 6 contribuciones</title>
-  </rect>
-  <rect x="599" y="118" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-07-17: 2 contribuciones</title>
-  </rect>
-  <rect x="599" y="130" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-07-18: 2 contribuciones</title>
-  </rect>
-  <rect x="599" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-07-19: 0 contribuciones</title>
-  </rect>
-  <rect x="611" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-07-20: 0 contribuciones</title>
-  </rect>
-  <rect x="611" y="82" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-07-21: 4 contribuciones</title>
-  </rect>
-  <rect x="611" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-07-22: 0 contribuciones</title>
-  </rect>
-  <rect x="611" y="106" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-07-23: 5 contribuciones</title>
-  </rect>
-  <rect x="611" y="118" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-07-24: 2 contribuciones</title>
-  </rect>
-  <rect x="611" y="130" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-07-25: 1 contribuciones</title>
-  </rect>
-  <rect x="611" y="142" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-07-26: 1 contribuciones</title>
-  </rect>
-  <rect x="623" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-07-27: 2 contribuciones</title>
-  </rect>
-  <rect x="623" y="82" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-07-28: 0 contribuciones</title>
-  </rect>
-  <rect x="623" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-07-29: 0 contribuciones</title>
-  </rect>
-  <rect x="623" y="106" width="10" height="10" fill="#40c463" class="brick">
-    <title>2025-07-30: 4 contribuciones</title>
-  </rect>
-  <rect x="623" y="118" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-07-31: 7 contribuciones</title>
-  </rect>
-  <rect x="623" y="130" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-08-01: 0 contribuciones</title>
-  </rect>
-  <rect x="623" y="142" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-08-02: 2 contribuciones</title>
-  </rect>
-  <rect x="635" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-08-03: 0 contribuciones</title>
-  </rect>
-  <rect x="635" y="82" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-08-04: 6 contribuciones</title>
-  </rect>
-  <rect x="635" y="94" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-08-05: 6 contribuciones</title>
-  </rect>
-  <rect x="635" y="106" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-08-06: 0 contribuciones</title>
-  </rect>
-  <rect x="635" y="118" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-08-07: 0 contribuciones</title>
-  </rect>
-  <rect x="635" y="130" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-08-08: 1 contribuciones</title>
-  </rect>
-  <rect x="635" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-08-09: 0 contribuciones</title>
-  </rect>
-  <rect x="647" y="70" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-08-10: 1 contribuciones</title>
-  </rect>
-  <rect x="647" y="82" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-08-11: 0 contribuciones</title>
-  </rect>
-  <rect x="647" y="94" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-08-12: 0 contribuciones</title>
-  </rect>
-  <rect x="647" y="106" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-08-13: 1 contribuciones</title>
-  </rect>
-  <rect x="647" y="118" width="10" height="10" fill="#9be9a8" class="brick">
-    <title>2025-08-14: 1 contribuciones</title>
-  </rect>
-  <rect x="647" y="130" width="10" height="10" fill="#30a14e" class="brick">
-    <title>2025-08-15: 7 contribuciones</title>
-  </rect>
-  <rect x="647" y="142" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-08-16: 0 contribuciones</title>
-  </rect>
-  <rect x="659" y="70" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-08-17: 0 contribuciones</title>
-  </rect>
-  <rect x="659" y="82" width="10" height="10" fill="#ebedf0" class="brick">
-    <title>2025-08-18: 0 contribuciones</title>
+  <rect x="20" y="55" width="688" height="215" class="game-area"/>
+  <rect x="35" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-08-18', 0)">
+    <title>2024-08-18: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="35" y="82" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-08-19', 2)">
+    <title>2024-08-19: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="35" y="94" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-08-20', 0)">
+    <title>2024-08-20: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="35" y="106" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-08-21', 2)">
+    <title>2024-08-21: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="35" y="118" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-08-22', 1)">
+    <title>2024-08-22: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="35" y="130" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-08-23', 1)">
+    <title>2024-08-23: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="35" y="142" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-08-24', 1)">
+    <title>2024-08-24: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="47" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-08-25', 0)">
+    <title>2024-08-25: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="47" y="82" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-08-26', 2)">
+    <title>2024-08-26: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="47" y="94" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-08-27', 0)">
+    <title>2024-08-27: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="47" y="106" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-08-28', 1)">
+    <title>2024-08-28: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="47" y="118" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-08-29', 1)">
+    <title>2024-08-29: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="47" y="130" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-08-30', 2)">
+    <title>2024-08-30: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="47" y="142" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-08-31', 1)">
+    <title>2024-08-31: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="59" y="70" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-09-01', 1)">
+    <title>2024-09-01: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="59" y="82" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2024-09-02', 8)">
+    <title>2024-09-02: 8 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="59" y="94" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-09-03', 0)">
+    <title>2024-09-03: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="59" y="106" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2024-09-04', 8)">
+    <title>2024-09-04: 8 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="59" y="118" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-09-05', 2)">
+    <title>2024-09-05: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="59" y="130" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2024-09-06', 11)">
+    <title>2024-09-06: 11 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="59" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-09-07', 0)">
+    <title>2024-09-07: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="71" y="70" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-09-08', 1)">
+    <title>2024-09-08: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="71" y="82" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2024-09-09', 11)">
+    <title>2024-09-09: 11 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="71" y="94" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-09-10', 2)">
+    <title>2024-09-10: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="71" y="106" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-09-11', 0)">
+    <title>2024-09-11: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="71" y="118" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2024-09-12', 5)">
+    <title>2024-09-12: 5 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="71" y="130" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2024-09-13', 9)">
+    <title>2024-09-13: 9 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="71" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-09-14', 0)">
+    <title>2024-09-14: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="83" y="70" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-09-15', 1)">
+    <title>2024-09-15: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="83" y="82" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-09-16', 0)">
+    <title>2024-09-16: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="83" y="94" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2024-09-17', 3)">
+    <title>2024-09-17: 3 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="83" y="106" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2024-09-18', 3)">
+    <title>2024-09-18: 3 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="83" y="118" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-09-19', 0)">
+    <title>2024-09-19: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="83" y="130" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2024-09-20', 6)">
+    <title>2024-09-20: 6 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="83" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-09-21', 0)">
+    <title>2024-09-21: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="95" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-09-22', 0)">
+    <title>2024-09-22: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="95" y="82" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2024-09-23', 10)">
+    <title>2024-09-23: 10 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="95" y="94" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2024-09-24', 5)">
+    <title>2024-09-24: 5 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="95" y="106" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2024-09-25', 3)">
+    <title>2024-09-25: 3 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="95" y="118" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2024-09-26', 9)">
+    <title>2024-09-26: 9 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="95" y="130" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-09-27', 0)">
+    <title>2024-09-27: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="95" y="142" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-09-28', 1)">
+    <title>2024-09-28: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="107" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-09-29', 0)">
+    <title>2024-09-29: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="107" y="82" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-09-30', 0)">
+    <title>2024-09-30: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="107" y="94" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2024-10-01', 10)">
+    <title>2024-10-01: 10 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="107" y="106" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2024-10-02', 10)">
+    <title>2024-10-02: 10 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="107" y="118" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-10-03', 0)">
+    <title>2024-10-03: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="107" y="130" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-10-04', 0)">
+    <title>2024-10-04: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="107" y="142" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-10-05', 1)">
+    <title>2024-10-05: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="119" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-10-06', 0)">
+    <title>2024-10-06: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="119" y="82" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2024-10-07', 7)">
+    <title>2024-10-07: 7 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="119" y="94" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2024-10-08', 9)">
+    <title>2024-10-08: 9 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="119" y="106" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-10-09', 0)">
+    <title>2024-10-09: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="119" y="118" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2024-10-10', 11)">
+    <title>2024-10-10: 11 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="119" y="130" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2024-10-11', 6)">
+    <title>2024-10-11: 6 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="119" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-10-12', 0)">
+    <title>2024-10-12: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="131" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-10-13', 0)">
+    <title>2024-10-13: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="131" y="82" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2024-10-14', 4)">
+    <title>2024-10-14: 4 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="131" y="94" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2024-10-15', 11)">
+    <title>2024-10-15: 11 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="131" y="106" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-10-16', 0)">
+    <title>2024-10-16: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="131" y="118" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-10-17', 1)">
+    <title>2024-10-17: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="131" y="130" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-10-18', 0)">
+    <title>2024-10-18: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="131" y="142" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-10-19', 1)">
+    <title>2024-10-19: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="143" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-10-20', 0)">
+    <title>2024-10-20: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="143" y="82" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2024-10-21', 9)">
+    <title>2024-10-21: 9 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="143" y="94" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2024-10-22', 10)">
+    <title>2024-10-22: 10 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="143" y="106" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2024-10-23', 4)">
+    <title>2024-10-23: 4 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="143" y="118" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2024-10-24', 10)">
+    <title>2024-10-24: 10 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="143" y="130" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-10-25', 0)">
+    <title>2024-10-25: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="143" y="142" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-10-26', 1)">
+    <title>2024-10-26: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="155" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-10-27', 0)">
+    <title>2024-10-27: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="155" y="82" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-10-28', 1)">
+    <title>2024-10-28: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="155" y="94" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2024-10-29', 10)">
+    <title>2024-10-29: 10 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="155" y="106" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2024-10-30', 3)">
+    <title>2024-10-30: 3 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="155" y="118" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-10-31', 0)">
+    <title>2024-10-31: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="155" y="130" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2024-11-01', 11)">
+    <title>2024-11-01: 11 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="155" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-11-02', 0)">
+    <title>2024-11-02: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="167" y="70" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-11-03', 1)">
+    <title>2024-11-03: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="167" y="82" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2024-11-04', 4)">
+    <title>2024-11-04: 4 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="167" y="94" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2024-11-05', 3)">
+    <title>2024-11-05: 3 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="167" y="106" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2024-11-06', 6)">
+    <title>2024-11-06: 6 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="167" y="118" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-11-07', 0)">
+    <title>2024-11-07: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="167" y="130" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-11-08', 0)">
+    <title>2024-11-08: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="167" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-11-09', 0)">
+    <title>2024-11-09: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="179" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-11-10', 0)">
+    <title>2024-11-10: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="179" y="82" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-11-11', 0)">
+    <title>2024-11-11: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="179" y="94" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-11-12', 1)">
+    <title>2024-11-12: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="179" y="106" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2024-11-13', 3)">
+    <title>2024-11-13: 3 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="179" y="118" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-11-14', 0)">
+    <title>2024-11-14: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="179" y="130" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2024-11-15', 5)">
+    <title>2024-11-15: 5 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="179" y="142" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-11-16', 1)">
+    <title>2024-11-16: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="191" y="70" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-11-17', 1)">
+    <title>2024-11-17: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="191" y="82" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-11-18', 0)">
+    <title>2024-11-18: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="191" y="94" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2024-11-19', 5)">
+    <title>2024-11-19: 5 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="191" y="106" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2024-11-20', 11)">
+    <title>2024-11-20: 11 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="191" y="118" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-11-21', 2)">
+    <title>2024-11-21: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="191" y="130" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2024-11-22', 4)">
+    <title>2024-11-22: 4 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="191" y="142" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-11-23', 1)">
+    <title>2024-11-23: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="203" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-11-24', 0)">
+    <title>2024-11-24: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="203" y="82" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-11-25', 0)">
+    <title>2024-11-25: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="203" y="94" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-11-26', 0)">
+    <title>2024-11-26: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="203" y="106" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-11-27', 0)">
+    <title>2024-11-27: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="203" y="118" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2024-11-28', 9)">
+    <title>2024-11-28: 9 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="203" y="130" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-11-29', 0)">
+    <title>2024-11-29: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="203" y="142" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-11-30', 1)">
+    <title>2024-11-30: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="215" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-12-01', 0)">
+    <title>2024-12-01: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="215" y="82" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2024-12-02', 6)">
+    <title>2024-12-02: 6 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="215" y="94" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2024-12-03', 9)">
+    <title>2024-12-03: 9 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="215" y="106" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2024-12-04', 6)">
+    <title>2024-12-04: 6 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="215" y="118" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-12-05', 1)">
+    <title>2024-12-05: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="215" y="130" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2024-12-06', 6)">
+    <title>2024-12-06: 6 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="215" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-12-07', 0)">
+    <title>2024-12-07: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="227" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-12-08', 0)">
+    <title>2024-12-08: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="227" y="82" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-12-09', 0)">
+    <title>2024-12-09: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="227" y="94" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2024-12-10', 10)">
+    <title>2024-12-10: 10 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="227" y="106" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-12-11', 0)">
+    <title>2024-12-11: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="227" y="118" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-12-12', 2)">
+    <title>2024-12-12: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="227" y="130" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2024-12-13', 3)">
+    <title>2024-12-13: 3 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="227" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-12-14', 0)">
+    <title>2024-12-14: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="239" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-12-15', 0)">
+    <title>2024-12-15: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="239" y="82" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2024-12-16', 4)">
+    <title>2024-12-16: 4 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="239" y="94" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2024-12-17', 11)">
+    <title>2024-12-17: 11 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="239" y="106" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-12-18', 2)">
+    <title>2024-12-18: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="239" y="118" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2024-12-19', 5)">
+    <title>2024-12-19: 5 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="239" y="130" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-12-20', 2)">
+    <title>2024-12-20: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="239" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-12-21', 0)">
+    <title>2024-12-21: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="251" y="70" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-12-22', 1)">
+    <title>2024-12-22: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="251" y="82" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2024-12-23', 2)">
+    <title>2024-12-23: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="251" y="94" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2024-12-24', 10)">
+    <title>2024-12-24: 10 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="251" y="106" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2024-12-25', 4)">
+    <title>2024-12-25: 4 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="251" y="118" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2024-12-26', 6)">
+    <title>2024-12-26: 6 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="251" y="130" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2024-12-27', 4)">
+    <title>2024-12-27: 4 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="251" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-12-28', 0)">
+    <title>2024-12-28: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="263" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-12-29', 0)">
+    <title>2024-12-29: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="263" y="82" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2024-12-30', 10)">
+    <title>2024-12-30: 10 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="263" y="94" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2024-12-31', 0)">
+    <title>2024-12-31: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="263" y="106" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-01-01', 0)">
+    <title>2025-01-01: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="263" y="118" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-01-02', 11)">
+    <title>2025-01-02: 11 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="263" y="130" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-01-03', 8)">
+    <title>2025-01-03: 8 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="263" y="142" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-01-04', 1)">
+    <title>2025-01-04: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="275" y="70" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-01-05', 1)">
+    <title>2025-01-05: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="275" y="82" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-01-06', 2)">
+    <title>2025-01-06: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="275" y="94" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-01-07', 10)">
+    <title>2025-01-07: 10 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="275" y="106" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-01-08', 11)">
+    <title>2025-01-08: 11 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="275" y="118" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-01-09', 7)">
+    <title>2025-01-09: 7 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="275" y="130" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-01-10', 6)">
+    <title>2025-01-10: 6 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="275" y="142" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-01-11', 1)">
+    <title>2025-01-11: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="287" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-01-12', 0)">
+    <title>2025-01-12: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="287" y="82" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-01-13', 5)">
+    <title>2025-01-13: 5 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="287" y="94" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-01-14', 5)">
+    <title>2025-01-14: 5 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="287" y="106" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-01-15', 4)">
+    <title>2025-01-15: 4 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="287" y="118" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-01-16', 0)">
+    <title>2025-01-16: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="287" y="130" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-01-17', 6)">
+    <title>2025-01-17: 6 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="287" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-01-18', 0)">
+    <title>2025-01-18: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="299" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-01-19', 0)">
+    <title>2025-01-19: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="299" y="82" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-01-20', 0)">
+    <title>2025-01-20: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="299" y="94" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-01-21', 0)">
+    <title>2025-01-21: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="299" y="106" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-01-22', 6)">
+    <title>2025-01-22: 6 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="299" y="118" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-01-23', 9)">
+    <title>2025-01-23: 9 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="299" y="130" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-01-24', 0)">
+    <title>2025-01-24: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="299" y="142" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-01-25', 1)">
+    <title>2025-01-25: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="311" y="70" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-01-26', 1)">
+    <title>2025-01-26: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="311" y="82" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-01-27', 0)">
+    <title>2025-01-27: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="311" y="94" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-01-28', 0)">
+    <title>2025-01-28: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="311" y="106" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-01-29', 9)">
+    <title>2025-01-29: 9 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="311" y="118" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-01-30', 9)">
+    <title>2025-01-30: 9 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="311" y="130" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-01-31', 0)">
+    <title>2025-01-31: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="311" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-02-01', 0)">
+    <title>2025-02-01: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="323" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-02-02', 0)">
+    <title>2025-02-02: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="323" y="82" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-02-03', 6)">
+    <title>2025-02-03: 6 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="323" y="94" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-02-04', 7)">
+    <title>2025-02-04: 7 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="323" y="106" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-02-05', 3)">
+    <title>2025-02-05: 3 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="323" y="118" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-02-06', 0)">
+    <title>2025-02-06: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="323" y="130" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-02-07', 0)">
+    <title>2025-02-07: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="323" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-02-08', 0)">
+    <title>2025-02-08: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="335" y="70" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-02-09', 1)">
+    <title>2025-02-09: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="335" y="82" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-02-10', 0)">
+    <title>2025-02-10: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="335" y="94" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-02-11', 7)">
+    <title>2025-02-11: 7 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="335" y="106" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-02-12', 3)">
+    <title>2025-02-12: 3 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="335" y="118" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-02-13', 6)">
+    <title>2025-02-13: 6 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="335" y="130" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-02-14', 0)">
+    <title>2025-02-14: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="335" y="142" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-02-15', 1)">
+    <title>2025-02-15: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="347" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-02-16', 0)">
+    <title>2025-02-16: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="347" y="82" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-02-17', 9)">
+    <title>2025-02-17: 9 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="347" y="94" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-02-18', 0)">
+    <title>2025-02-18: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="347" y="106" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-02-19', 4)">
+    <title>2025-02-19: 4 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="347" y="118" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-02-20', 0)">
+    <title>2025-02-20: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="347" y="130" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-02-21', 0)">
+    <title>2025-02-21: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="347" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-02-22', 0)">
+    <title>2025-02-22: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="359" y="70" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-02-23', 1)">
+    <title>2025-02-23: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="359" y="82" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-02-24', 4)">
+    <title>2025-02-24: 4 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="359" y="94" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-02-25', 5)">
+    <title>2025-02-25: 5 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="359" y="106" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-02-26', 10)">
+    <title>2025-02-26: 10 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="359" y="118" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-02-27', 0)">
+    <title>2025-02-27: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="359" y="130" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-02-28', 8)">
+    <title>2025-02-28: 8 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="359" y="142" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-03-01', 1)">
+    <title>2025-03-01: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="371" y="70" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-03-02', 1)">
+    <title>2025-03-02: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="371" y="82" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-03-03', 11)">
+    <title>2025-03-03: 11 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="371" y="94" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-03-04', 4)">
+    <title>2025-03-04: 4 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="371" y="106" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-03-05', 3)">
+    <title>2025-03-05: 3 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="371" y="118" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-03-06', 10)">
+    <title>2025-03-06: 10 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="371" y="130" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-03-07', 0)">
+    <title>2025-03-07: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="371" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-03-08', 0)">
+    <title>2025-03-08: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="383" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-03-09', 0)">
+    <title>2025-03-09: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="383" y="82" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-03-10', 8)">
+    <title>2025-03-10: 8 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="383" y="94" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-03-11', 4)">
+    <title>2025-03-11: 4 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="383" y="106" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-03-12', 3)">
+    <title>2025-03-12: 3 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="383" y="118" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-03-13', 0)">
+    <title>2025-03-13: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="383" y="130" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-03-14', 0)">
+    <title>2025-03-14: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="383" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-03-15', 0)">
+    <title>2025-03-15: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="395" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-03-16', 0)">
+    <title>2025-03-16: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="395" y="82" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-03-17', 10)">
+    <title>2025-03-17: 10 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="395" y="94" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-03-18', 2)">
+    <title>2025-03-18: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="395" y="106" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-03-19', 11)">
+    <title>2025-03-19: 11 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="395" y="118" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-03-20', 4)">
+    <title>2025-03-20: 4 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="395" y="130" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-03-21', 11)">
+    <title>2025-03-21: 11 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="395" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-03-22', 0)">
+    <title>2025-03-22: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="407" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-03-23', 0)">
+    <title>2025-03-23: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="407" y="82" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-03-24', 5)">
+    <title>2025-03-24: 5 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="407" y="94" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-03-25', 9)">
+    <title>2025-03-25: 9 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="407" y="106" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-03-26', 8)">
+    <title>2025-03-26: 8 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="407" y="118" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-03-27', 4)">
+    <title>2025-03-27: 4 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="407" y="130" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-03-28', 1)">
+    <title>2025-03-28: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="407" y="142" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-03-29', 1)">
+    <title>2025-03-29: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="419" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-03-30', 0)">
+    <title>2025-03-30: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="419" y="82" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-03-31', 10)">
+    <title>2025-03-31: 10 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="419" y="94" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-04-01', 0)">
+    <title>2025-04-01: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="419" y="106" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-04-02', 8)">
+    <title>2025-04-02: 8 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="419" y="118" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-04-03', 4)">
+    <title>2025-04-03: 4 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="419" y="130" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-04-04', 8)">
+    <title>2025-04-04: 8 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="419" y="142" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-04-05', 1)">
+    <title>2025-04-05: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="431" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-04-06', 0)">
+    <title>2025-04-06: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="431" y="82" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-04-07', 7)">
+    <title>2025-04-07: 7 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="431" y="94" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-04-08', 7)">
+    <title>2025-04-08: 7 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="431" y="106" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-04-09', 0)">
+    <title>2025-04-09: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="431" y="118" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-04-10', 4)">
+    <title>2025-04-10: 4 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="431" y="130" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-04-11', 9)">
+    <title>2025-04-11: 9 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="431" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-04-12', 0)">
+    <title>2025-04-12: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="443" y="70" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-04-13', 1)">
+    <title>2025-04-13: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="443" y="82" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-04-14', 5)">
+    <title>2025-04-14: 5 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="443" y="94" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-04-15', 7)">
+    <title>2025-04-15: 7 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="443" y="106" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-04-16', 0)">
+    <title>2025-04-16: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="443" y="118" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-04-17', 0)">
+    <title>2025-04-17: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="443" y="130" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-04-18', 3)">
+    <title>2025-04-18: 3 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="443" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-04-19', 0)">
+    <title>2025-04-19: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="455" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-04-20', 0)">
+    <title>2025-04-20: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="455" y="82" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-04-21', 0)">
+    <title>2025-04-21: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="455" y="94" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-04-22', 9)">
+    <title>2025-04-22: 9 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="455" y="106" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-04-23', 9)">
+    <title>2025-04-23: 9 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="455" y="118" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-04-24', 0)">
+    <title>2025-04-24: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="455" y="130" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-04-25', 2)">
+    <title>2025-04-25: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="455" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-04-26', 0)">
+    <title>2025-04-26: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="467" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-04-27', 0)">
+    <title>2025-04-27: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="467" y="82" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-04-28', 0)">
+    <title>2025-04-28: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="467" y="94" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-04-29', 1)">
+    <title>2025-04-29: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="467" y="106" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-04-30', 1)">
+    <title>2025-04-30: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="467" y="118" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-05-01', 0)">
+    <title>2025-05-01: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="467" y="130" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-05-02', 7)">
+    <title>2025-05-02: 7 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="467" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-05-03', 0)">
+    <title>2025-05-03: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="479" y="70" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-05-04', 1)">
+    <title>2025-05-04: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="479" y="82" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-05-05', 5)">
+    <title>2025-05-05: 5 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="479" y="94" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-05-06', 0)">
+    <title>2025-05-06: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="479" y="106" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-05-07', 6)">
+    <title>2025-05-07: 6 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="479" y="118" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-05-08', 0)">
+    <title>2025-05-08: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="479" y="130" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-05-09', 7)">
+    <title>2025-05-09: 7 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="479" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-05-10', 0)">
+    <title>2025-05-10: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="491" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-05-11', 0)">
+    <title>2025-05-11: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="491" y="82" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-05-12', 4)">
+    <title>2025-05-12: 4 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="491" y="94" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-05-13', 10)">
+    <title>2025-05-13: 10 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="491" y="106" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-05-14', 5)">
+    <title>2025-05-14: 5 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="491" y="118" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-05-15', 9)">
+    <title>2025-05-15: 9 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="491" y="130" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-05-16', 2)">
+    <title>2025-05-16: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="491" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-05-17', 0)">
+    <title>2025-05-17: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="503" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-05-18', 0)">
+    <title>2025-05-18: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="503" y="82" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-05-19', 0)">
+    <title>2025-05-19: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="503" y="94" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-05-20', 9)">
+    <title>2025-05-20: 9 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="503" y="106" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-05-21', 1)">
+    <title>2025-05-21: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="503" y="118" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-05-22', 8)">
+    <title>2025-05-22: 8 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="503" y="130" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-05-23', 4)">
+    <title>2025-05-23: 4 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="503" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-05-24', 0)">
+    <title>2025-05-24: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="515" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-05-25', 0)">
+    <title>2025-05-25: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="515" y="82" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-05-26', 0)">
+    <title>2025-05-26: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="515" y="94" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-05-27', 1)">
+    <title>2025-05-27: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="515" y="106" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-05-28', 9)">
+    <title>2025-05-28: 9 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="515" y="118" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-05-29', 1)">
+    <title>2025-05-29: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="515" y="130" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-05-30', 2)">
+    <title>2025-05-30: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="515" y="142" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-05-31', 1)">
+    <title>2025-05-31: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="527" y="70" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-06-01', 1)">
+    <title>2025-06-01: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="527" y="82" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-06-02', 0)">
+    <title>2025-06-02: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="527" y="94" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-06-03', 3)">
+    <title>2025-06-03: 3 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="527" y="106" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-06-04', 0)">
+    <title>2025-06-04: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="527" y="118" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-06-05', 11)">
+    <title>2025-06-05: 11 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="527" y="130" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-06-06', 0)">
+    <title>2025-06-06: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="527" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-06-07', 0)">
+    <title>2025-06-07: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="539" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-06-08', 0)">
+    <title>2025-06-08: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="539" y="82" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-06-09', 8)">
+    <title>2025-06-09: 8 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="539" y="94" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-06-10', 5)">
+    <title>2025-06-10: 5 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="539" y="106" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-06-11', 2)">
+    <title>2025-06-11: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="539" y="118" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-06-12', 0)">
+    <title>2025-06-12: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="539" y="130" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-06-13', 0)">
+    <title>2025-06-13: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="539" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-06-14', 0)">
+    <title>2025-06-14: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="551" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-06-15', 0)">
+    <title>2025-06-15: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="551" y="82" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-06-16', 10)">
+    <title>2025-06-16: 10 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="551" y="94" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-06-17', 4)">
+    <title>2025-06-17: 4 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="551" y="106" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-06-18', 0)">
+    <title>2025-06-18: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="551" y="118" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-06-19', 3)">
+    <title>2025-06-19: 3 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="551" y="130" width="10" height="10" 
+        fill="#30a14e" class="brick" 
+        onclick="showContribution('2025-06-20', 6)">
+    <title>2025-06-20: 6 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="551" y="142" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-06-21', 1)">
+    <title>2025-06-21: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="563" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-06-22', 0)">
+    <title>2025-06-22: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="563" y="82" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-06-23', 0)">
+    <title>2025-06-23: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="563" y="94" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-06-24', 9)">
+    <title>2025-06-24: 9 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="563" y="106" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-06-25', 4)">
+    <title>2025-06-25: 4 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="563" y="118" width="10" height="10" 
+        fill="#216e39" class="brick" 
+        onclick="showContribution('2025-06-26', 9)">
+    <title>2025-06-26: 9 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="563" y="130" width="10" height="10" 
+        fill="#40c463" class="brick" 
+        onclick="showContribution('2025-06-27', 3)">
+    <title>2025-06-27: 3 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="563" y="142" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-06-28', 1)">
+    <title>2025-06-28: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="575" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-06-29', 0)">
+    <title>2025-06-29: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="575" y="82" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-06-30', 0)">
+    <title>2025-06-30: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="575" y="94" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-07-01', 1)">
+    <title>2025-07-01: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="575" y="106" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-07-02', 1)">
+    <title>2025-07-02: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="575" y="118" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-07-03', 2)">
+    <title>2025-07-03: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="575" y="130" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-07-04', 0)">
+    <title>2025-07-04: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="575" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-07-05', 0)">
+    <title>2025-07-05: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="587" y="70" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-07-06', 1)">
+    <title>2025-07-06: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="587" y="82" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-07-07', 2)">
+    <title>2025-07-07: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="587" y="94" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-07-08', 2)">
+    <title>2025-07-08: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="587" y="106" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-07-09', 0)">
+    <title>2025-07-09: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="587" y="118" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-07-10', 0)">
+    <title>2025-07-10: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="587" y="130" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-07-11', 0)">
+    <title>2025-07-11: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="587" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-07-12', 0)">
+    <title>2025-07-12: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="599" y="70" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-07-13', 1)">
+    <title>2025-07-13: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="599" y="82" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-07-14', 1)">
+    <title>2025-07-14: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="599" y="94" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-07-15', 2)">
+    <title>2025-07-15: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="599" y="106" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-07-16', 0)">
+    <title>2025-07-16: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="599" y="118" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-07-17', 2)">
+    <title>2025-07-17: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="599" y="130" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-07-18', 0)">
+    <title>2025-07-18: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="599" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-07-19', 0)">
+    <title>2025-07-19: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="611" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-07-20', 0)">
+    <title>2025-07-20: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="611" y="82" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-07-21', 1)">
+    <title>2025-07-21: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="611" y="94" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-07-22', 0)">
+    <title>2025-07-22: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="611" y="106" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-07-23', 2)">
+    <title>2025-07-23: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="611" y="118" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-07-24', 1)">
+    <title>2025-07-24: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="611" y="130" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-07-25', 0)">
+    <title>2025-07-25: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="611" y="142" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-07-26', 1)">
+    <title>2025-07-26: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="623" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-07-27', 0)">
+    <title>2025-07-27: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="623" y="82" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-07-28', 0)">
+    <title>2025-07-28: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="623" y="94" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-07-29', 1)">
+    <title>2025-07-29: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="623" y="106" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-07-30', 2)">
+    <title>2025-07-30: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="623" y="118" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-07-31', 1)">
+    <title>2025-07-31: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="623" y="130" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-08-01', 0)">
+    <title>2025-08-01: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="623" y="142" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-08-02', 0)">
+    <title>2025-08-02: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="635" y="70" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-08-03', 1)">
+    <title>2025-08-03: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="635" y="82" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-08-04', 0)">
+    <title>2025-08-04: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="635" y="94" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-08-05', 0)">
+    <title>2025-08-05: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="635" y="106" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-08-06', 0)">
+    <title>2025-08-06: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="635" y="118" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-08-07', 0)">
+    <title>2025-08-07: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="635" y="130" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-08-08', 0)">
+    <title>2025-08-08: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="635" y="142" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-08-09', 1)">
+    <title>2025-08-09: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="647" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-08-10', 0)">
+    <title>2025-08-10: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="647" y="82" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-08-11', 2)">
+    <title>2025-08-11: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="647" y="94" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-08-12', 2)">
+    <title>2025-08-12: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="647" y="106" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-08-13', 2)">
+    <title>2025-08-13: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="647" y="118" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-08-14', 0)">
+    <title>2025-08-14: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="647" y="130" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-08-15', 2)">
+    <title>2025-08-15: 2 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="647" y="142" width="10" height="10" 
+        fill="#9be9a8" class="brick" 
+        onclick="showContribution('2025-08-16', 1)">
+    <title>2025-08-16: 1 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="659" y="70" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-08-17', 0)">
+    <title>2025-08-17: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+  </rect>
+  <rect x="659" y="82" width="10" height="10" 
+        fill="#ebedf0" class="brick" 
+        onclick="showContribution('2025-08-18', 0)">
+    <title>2025-08-18: 0 contribuciones - ¡Haz clic para ver detalles!</title>
   </rect>
   
   <!-- Paddle -->
-  <rect x="334" y="275" width="60" height="8" class="paddle"/>
+  <rect x="334" y="260" width="60" height="8" class="paddle"/>
   
   <!-- Ball -->
-  <circle cx="382.8008720488751" cy="260" r="4" class="ball"/>
+  <circle cx="356.7542721652367" cy="245" r="4" class="ball"/>
+  
+  <!-- Play Button -->
+  <rect x="608" y="15" width="80" height="25" rx="12" class="play-button" onclick="playGame()"/>
+  <text x="648" y="30" text-anchor="middle" class="play-text">🎮 JUGAR</text>
   
   <!-- Score Info -->
-  <text x="30" y="300" class="score">📊 711 contribuciones</text>
-  <text x="698" y="300" text-anchor="end" class="score">🔥 205 días activos</text>
+  <text x="30" y="290" class="score">📊 1007 contribuciones totales</text>
+  <text x="30" y="305" class="score">🔥 217 días activos</text>
   
   <!-- Instructions -->
-  <text x="364" y="310" text-anchor="middle" class="subtitle">¡Usa tus contribuciones como ladrillos para romper! 🎯</text>
+  <text x="364" y="305" text-anchor="middle" class="subtitle">🖱️ Haz clic en los ladrillos para ver detalles | 🎮 Presiona JUGAR para el juego completo</text>
   
 </svg>

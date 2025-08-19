@@ -31,9 +31,13 @@ jobs:
         npm install --save-dev @types/node typescript
         npm install axios cheerio
         
-    - name: Create GitHub Breakout generator
+    - name: Copy advanced generator
       run: |
-        cat > generate-breakout.js << 'EOF'
+        cp advanced-cli.js generate-breakout.js
+        
+    - name: Create GitHub Breakout generator (fallback)
+      run: |
+        cat > generate-breakout-fallback.js << 'EOF'
         const fs = require('fs');
         const axios = require('axios');
         
@@ -215,12 +219,19 @@ jobs:
     - name: Generate Breakout SVGs
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: node generate-breakout.js
+      run: |
+        if [ -f "advanced-cli.js" ]; then
+          echo "Using advanced generator..."
+          node advanced-cli.js ${{ github.repository_owner }} ${{ secrets.GITHUB_TOKEN }}
+        else
+          echo "Using fallback generator..."
+          node generate-breakout-fallback.js
+        fi
       
     - name: Commit and push changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add github-breakout-*.svg
+        git add github-breakout-*.svg github-breakout-data.json
         git diff --staged --quiet || git commit -m "🎮 Update GitHub Breakout game - $(date +'%Y-%m-%d')"
         git push

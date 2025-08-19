@@ -240,6 +240,7 @@ cache/
 .idea/
 *.sublime-*
 
-# Archivos específicos de GitHub Breakout que no queremos trackear
-# (Los archivos SVG SÍ los queremos trackear porque son el output del proyecto)
-# github-breakout-*.svg
+# Archivos específicos de GitHub Breakout que SÍ queremos trackear
+# github-breakout-*.svg - Queremos estos
+# game.html - Queremos este
+# github-breakout-data.json - Queremos este
