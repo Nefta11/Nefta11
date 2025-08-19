@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="728" height="315" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 728 315">
+<svg width="728" height="315" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
+<<<<<<< HEAD
       .title { 
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; 
         font-size: 16px; 
@@ -67,6 +68,14 @@
         font-weight: 600;
         pointer-events: none;
       }
+=======
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 600; fill: #24292f; }
+      .subtitle { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 12px; fill: #24292f; opacity: 0.7; }
+      .brick { stroke: #ffffff; stroke-width: 1; }
+      .paddle { fill: #0969da; rx: 2; }
+      .ball { fill: #cf222e; }
+      .game-area { stroke: #24292f; stroke-width: 2; fill: none; opacity: 0.3; }
+>>>>>>> c2fcdc9fd2398774721725fd4da321d84f8bc91e
     </style>
     <script type="text/javascript">
       <![CDATA[
@@ -81,13 +90,14 @@
     </script>
   </defs>
   
-  <rect width="100%" height="100%" fill="#ffffff" rx="12"/>
+  <rect width="100%" height="100%" fill="#ffffff"/>
   
   <!-- Title -->
-  <text x="364" y="25" text-anchor="middle" class="title">🎮 GitHub Breakout - @Nefta11</text>
-  <text x="364" y="45" text-anchor="middle" class="subtitle">¡Rompe los ladrillos con tu historial de contribuciones!</text>
+  <text x="364" y="25" text-anchor="middle" class="title">GitHub Breakout - Nefta11</text>
+  <text x="364" y="45" text-anchor="middle" class="subtitle">Break the blocks with your contribution history!</text>
   
   <!-- Game Area Border -->
+<<<<<<< HEAD
   <rect x="20" y="55" width="688" height="215" class="game-area"/>
   <rect x="35" y="70" width="10" height="10" 
         fill="#ebedf0" class="brick" 
@@ -1918,12 +1928,1115 @@
         fill="#ebedf0" class="brick" 
         onclick="showContribution('2025-08-18', 0)">
     <title>2025-08-18: 0 contribuciones - ¡Haz clic para ver detalles!</title>
+=======
+  <rect x="20" y="55" width="688" height="240" class="game-area"/>
+  
+  <!-- Contribution Bricks -->
+  <rect x="30" y="65" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-08-19: 0 contributions</title>
+  </rect>
+  <rect x="30" y="77" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-08-20: 4 contributions</title>
+  </rect>
+  <rect x="30" y="89" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-08-21: 4 contributions</title>
+  </rect>
+  <rect x="30" y="101" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-08-22: 7 contributions</title>
+  </rect>
+  <rect x="30" y="113" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-08-23: 3 contributions</title>
+  </rect>
+  <rect x="30" y="125" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-08-24: 0 contributions</title>
+  </rect>
+  <rect x="30" y="137" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-08-25: 0 contributions</title>
+  </rect>
+  <rect x="42" y="65" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-08-26: 8 contributions</title>
+  </rect>
+  <rect x="42" y="77" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-08-27: 5 contributions</title>
+  </rect>
+  <rect x="42" y="89" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-08-28: 4 contributions</title>
+  </rect>
+  <rect x="42" y="101" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-08-29: 1 contributions</title>
+  </rect>
+  <rect x="42" y="113" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-08-30: 8 contributions</title>
+  </rect>
+  <rect x="42" y="125" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-08-31: 5 contributions</title>
+  </rect>
+  <rect x="42" y="137" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-09-01: 9 contributions</title>
+  </rect>
+  <rect x="54" y="65" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-09-02: 2 contributions</title>
+  </rect>
+  <rect x="54" y="77" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-09-03: 4 contributions</title>
+  </rect>
+  <rect x="54" y="89" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-09-04: 3 contributions</title>
+  </rect>
+  <rect x="54" y="101" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-09-05: 3 contributions</title>
+  </rect>
+  <rect x="54" y="113" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-09-06: 1 contributions</title>
+  </rect>
+  <rect x="54" y="125" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-09-07: 0 contributions</title>
+  </rect>
+  <rect x="54" y="137" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-09-08: 2 contributions</title>
+  </rect>
+  <rect x="66" y="65" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-09-09: 0 contributions</title>
+  </rect>
+  <rect x="66" y="77" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-09-10: 8 contributions</title>
+  </rect>
+  <rect x="66" y="89" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-09-11: 1 contributions</title>
+  </rect>
+  <rect x="66" y="101" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-09-12: 5 contributions</title>
+  </rect>
+  <rect x="66" y="113" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-09-13: 9 contributions</title>
+  </rect>
+  <rect x="66" y="125" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-09-14: 6 contributions</title>
+  </rect>
+  <rect x="66" y="137" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-09-15: 4 contributions</title>
+  </rect>
+  <rect x="78" y="65" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-09-16: 0 contributions</title>
+  </rect>
+  <rect x="78" y="77" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-09-17: 0 contributions</title>
+  </rect>
+  <rect x="78" y="89" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-09-18: 6 contributions</title>
+  </rect>
+  <rect x="78" y="101" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-09-19: 1 contributions</title>
+  </rect>
+  <rect x="78" y="113" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-09-20: 0 contributions</title>
+  </rect>
+  <rect x="78" y="125" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-09-21: 0 contributions</title>
+  </rect>
+  <rect x="78" y="137" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-09-22: 6 contributions</title>
+  </rect>
+  <rect x="90" y="65" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-09-23: 4 contributions</title>
+  </rect>
+  <rect x="90" y="77" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-09-24: 0 contributions</title>
+  </rect>
+  <rect x="90" y="89" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-09-25: 6 contributions</title>
+  </rect>
+  <rect x="90" y="101" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-09-26: 6 contributions</title>
+  </rect>
+  <rect x="90" y="113" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-09-27: 9 contributions</title>
+  </rect>
+  <rect x="90" y="125" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-09-28: 0 contributions</title>
+  </rect>
+  <rect x="90" y="137" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-09-29: 4 contributions</title>
+  </rect>
+  <rect x="102" y="65" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-09-30: 6 contributions</title>
+  </rect>
+  <rect x="102" y="77" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-10-01: 0 contributions</title>
+  </rect>
+  <rect x="102" y="89" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-10-02: 9 contributions</title>
+  </rect>
+  <rect x="102" y="101" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-10-03: 0 contributions</title>
+  </rect>
+  <rect x="102" y="113" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-10-04: 8 contributions</title>
+  </rect>
+  <rect x="102" y="125" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-10-05: 4 contributions</title>
+  </rect>
+  <rect x="102" y="137" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-10-06: 8 contributions</title>
+  </rect>
+  <rect x="114" y="65" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-10-07: 6 contributions</title>
+  </rect>
+  <rect x="114" y="77" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-10-08: 3 contributions</title>
+  </rect>
+  <rect x="114" y="89" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-10-09: 8 contributions</title>
+  </rect>
+  <rect x="114" y="101" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-10-10: 3 contributions</title>
+  </rect>
+  <rect x="114" y="113" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-10-11: 4 contributions</title>
+  </rect>
+  <rect x="114" y="125" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-10-12: 7 contributions</title>
+  </rect>
+  <rect x="114" y="137" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-10-13: 0 contributions</title>
+  </rect>
+  <rect x="126" y="65" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-10-14: 7 contributions</title>
+  </rect>
+  <rect x="126" y="77" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-10-15: 5 contributions</title>
+  </rect>
+  <rect x="126" y="89" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-10-16: 4 contributions</title>
+  </rect>
+  <rect x="126" y="101" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-10-17: 4 contributions</title>
+  </rect>
+  <rect x="126" y="113" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-10-18: 0 contributions</title>
+  </rect>
+  <rect x="126" y="125" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-10-19: 7 contributions</title>
+  </rect>
+  <rect x="126" y="137" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-10-20: 7 contributions</title>
+  </rect>
+  <rect x="138" y="65" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-10-21: 3 contributions</title>
+  </rect>
+  <rect x="138" y="77" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-10-22: 0 contributions</title>
+  </rect>
+  <rect x="138" y="89" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-10-23: 9 contributions</title>
+  </rect>
+  <rect x="138" y="101" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-10-24: 0 contributions</title>
+  </rect>
+  <rect x="138" y="113" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-10-25: 6 contributions</title>
+  </rect>
+  <rect x="138" y="125" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-10-26: 3 contributions</title>
+  </rect>
+  <rect x="138" y="137" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-10-27: 3 contributions</title>
+  </rect>
+  <rect x="150" y="65" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-10-28: 0 contributions</title>
+  </rect>
+  <rect x="150" y="77" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-10-29: 5 contributions</title>
+  </rect>
+  <rect x="150" y="89" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-10-30: 4 contributions</title>
+  </rect>
+  <rect x="150" y="101" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-10-31: 6 contributions</title>
+  </rect>
+  <rect x="150" y="113" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-11-01: 9 contributions</title>
+  </rect>
+  <rect x="150" y="125" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-11-02: 0 contributions</title>
+  </rect>
+  <rect x="150" y="137" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-11-03: 7 contributions</title>
+  </rect>
+  <rect x="162" y="65" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-11-04: 6 contributions</title>
+  </rect>
+  <rect x="162" y="77" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-11-05: 5 contributions</title>
+  </rect>
+  <rect x="162" y="89" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-11-06: 7 contributions</title>
+  </rect>
+  <rect x="162" y="101" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-11-07: 3 contributions</title>
+  </rect>
+  <rect x="162" y="113" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-11-08: 8 contributions</title>
+  </rect>
+  <rect x="162" y="125" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-11-09: 5 contributions</title>
+  </rect>
+  <rect x="162" y="137" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-11-10: 9 contributions</title>
+  </rect>
+  <rect x="174" y="65" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-11-11: 6 contributions</title>
+  </rect>
+  <rect x="174" y="77" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-11-12: 0 contributions</title>
+  </rect>
+  <rect x="174" y="89" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-11-13: 4 contributions</title>
+  </rect>
+  <rect x="174" y="101" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-11-14: 8 contributions</title>
+  </rect>
+  <rect x="174" y="113" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-11-15: 8 contributions</title>
+  </rect>
+  <rect x="174" y="125" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-11-16: 6 contributions</title>
+  </rect>
+  <rect x="174" y="137" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-11-17: 5 contributions</title>
+  </rect>
+  <rect x="186" y="65" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-11-18: 0 contributions</title>
+  </rect>
+  <rect x="186" y="77" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-11-19: 4 contributions</title>
+  </rect>
+  <rect x="186" y="89" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-11-20: 8 contributions</title>
+  </rect>
+  <rect x="186" y="101" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-11-21: 6 contributions</title>
+  </rect>
+  <rect x="186" y="113" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-11-22: 1 contributions</title>
+  </rect>
+  <rect x="186" y="125" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-11-23: 1 contributions</title>
+  </rect>
+  <rect x="186" y="137" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-11-24: 5 contributions</title>
+  </rect>
+  <rect x="198" y="65" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-11-25: 5 contributions</title>
+  </rect>
+  <rect x="198" y="77" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-11-26: 4 contributions</title>
+  </rect>
+  <rect x="198" y="89" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-11-27: 8 contributions</title>
+  </rect>
+  <rect x="198" y="101" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-11-28: 1 contributions</title>
+  </rect>
+  <rect x="198" y="113" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-11-29: 1 contributions</title>
+  </rect>
+  <rect x="198" y="125" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-11-30: 0 contributions</title>
+  </rect>
+  <rect x="198" y="137" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-12-01: 8 contributions</title>
+  </rect>
+  <rect x="210" y="65" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-12-02: 5 contributions</title>
+  </rect>
+  <rect x="210" y="77" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-12-03: 2 contributions</title>
+  </rect>
+  <rect x="210" y="89" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-12-04: 5 contributions</title>
+  </rect>
+  <rect x="210" y="101" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-12-05: 0 contributions</title>
+  </rect>
+  <rect x="210" y="113" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-12-06: 3 contributions</title>
+  </rect>
+  <rect x="210" y="125" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-12-07: 0 contributions</title>
+  </rect>
+  <rect x="210" y="137" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-12-08: 5 contributions</title>
+  </rect>
+  <rect x="222" y="65" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-12-09: 1 contributions</title>
+  </rect>
+  <rect x="222" y="77" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-12-10: 7 contributions</title>
+  </rect>
+  <rect x="222" y="89" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-12-11: 0 contributions</title>
+  </rect>
+  <rect x="222" y="101" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-12-12: 2 contributions</title>
+  </rect>
+  <rect x="222" y="113" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-12-13: 7 contributions</title>
+  </rect>
+  <rect x="222" y="125" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-12-14: 0 contributions</title>
+  </rect>
+  <rect x="222" y="137" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-12-15: 7 contributions</title>
+  </rect>
+  <rect x="234" y="65" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-12-16: 7 contributions</title>
+  </rect>
+  <rect x="234" y="77" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-12-17: 7 contributions</title>
+  </rect>
+  <rect x="234" y="89" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-12-18: 8 contributions</title>
+  </rect>
+  <rect x="234" y="101" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-12-19: 7 contributions</title>
+  </rect>
+  <rect x="234" y="113" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-12-20: 9 contributions</title>
+  </rect>
+  <rect x="234" y="125" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-12-21: 2 contributions</title>
+  </rect>
+  <rect x="234" y="137" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-12-22: 3 contributions</title>
+  </rect>
+  <rect x="246" y="65" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-12-23: 2 contributions</title>
+  </rect>
+  <rect x="246" y="77" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2024-12-24: 9 contributions</title>
+  </rect>
+  <rect x="246" y="89" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2024-12-25: 1 contributions</title>
+  </rect>
+  <rect x="246" y="101" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-12-26: 0 contributions</title>
+  </rect>
+  <rect x="246" y="113" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-12-27: 4 contributions</title>
+  </rect>
+  <rect x="246" y="125" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-12-28: 6 contributions</title>
+  </rect>
+  <rect x="246" y="137" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2024-12-29: 0 contributions</title>
+  </rect>
+  <rect x="258" y="65" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-12-30: 5 contributions</title>
+  </rect>
+  <rect x="258" y="77" width="10" height="10" fill="#40c463" class="brick">
+    <title>2024-12-31: 5 contributions</title>
+  </rect>
+  <rect x="258" y="89" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-01-01: 0 contributions</title>
+  </rect>
+  <rect x="258" y="101" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-01-02: 2 contributions</title>
+  </rect>
+  <rect x="258" y="113" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-01-03: 3 contributions</title>
+  </rect>
+  <rect x="258" y="125" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-01-04: 2 contributions</title>
+  </rect>
+  <rect x="258" y="137" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-01-05: 2 contributions</title>
+  </rect>
+  <rect x="270" y="65" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-01-06: 6 contributions</title>
+  </rect>
+  <rect x="270" y="77" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-01-07: 2 contributions</title>
+  </rect>
+  <rect x="270" y="89" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-01-08: 7 contributions</title>
+  </rect>
+  <rect x="270" y="101" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-01-09: 2 contributions</title>
+  </rect>
+  <rect x="270" y="113" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-01-10: 9 contributions</title>
+  </rect>
+  <rect x="270" y="125" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-01-11: 3 contributions</title>
+  </rect>
+  <rect x="270" y="137" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-01-12: 9 contributions</title>
+  </rect>
+  <rect x="282" y="65" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-01-13: 3 contributions</title>
+  </rect>
+  <rect x="282" y="77" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-01-14: 7 contributions</title>
+  </rect>
+  <rect x="282" y="89" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-01-15: 0 contributions</title>
+  </rect>
+  <rect x="282" y="101" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-01-16: 7 contributions</title>
+  </rect>
+  <rect x="282" y="113" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-01-17: 0 contributions</title>
+  </rect>
+  <rect x="282" y="125" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-01-18: 4 contributions</title>
+  </rect>
+  <rect x="282" y="137" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-01-19: 0 contributions</title>
+  </rect>
+  <rect x="294" y="65" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-01-20: 5 contributions</title>
+  </rect>
+  <rect x="294" y="77" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-01-21: 3 contributions</title>
+  </rect>
+  <rect x="294" y="89" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-01-22: 3 contributions</title>
+  </rect>
+  <rect x="294" y="101" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-01-23: 3 contributions</title>
+  </rect>
+  <rect x="294" y="113" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-01-24: 5 contributions</title>
+  </rect>
+  <rect x="294" y="125" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-01-25: 3 contributions</title>
+  </rect>
+  <rect x="294" y="137" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-01-26: 8 contributions</title>
+  </rect>
+  <rect x="306" y="65" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-01-27: 8 contributions</title>
+  </rect>
+  <rect x="306" y="77" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-01-28: 1 contributions</title>
+  </rect>
+  <rect x="306" y="89" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-01-29: 7 contributions</title>
+  </rect>
+  <rect x="306" y="101" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-01-30: 3 contributions</title>
+  </rect>
+  <rect x="306" y="113" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-01-31: 3 contributions</title>
+  </rect>
+  <rect x="306" y="125" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-02-01: 4 contributions</title>
+  </rect>
+  <rect x="306" y="137" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-02-02: 6 contributions</title>
+  </rect>
+  <rect x="318" y="65" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-02-03: 9 contributions</title>
+  </rect>
+  <rect x="318" y="77" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-02-04: 1 contributions</title>
+  </rect>
+  <rect x="318" y="89" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-02-05: 1 contributions</title>
+  </rect>
+  <rect x="318" y="101" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-02-06: 6 contributions</title>
+  </rect>
+  <rect x="318" y="113" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-02-07: 0 contributions</title>
+  </rect>
+  <rect x="318" y="125" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-02-08: 6 contributions</title>
+  </rect>
+  <rect x="318" y="137" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-02-09: 0 contributions</title>
+  </rect>
+  <rect x="330" y="65" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-02-10: 4 contributions</title>
+  </rect>
+  <rect x="330" y="77" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-02-11: 5 contributions</title>
+  </rect>
+  <rect x="330" y="89" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-02-12: 7 contributions</title>
+  </rect>
+  <rect x="330" y="101" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-02-13: 3 contributions</title>
+  </rect>
+  <rect x="330" y="113" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-02-14: 0 contributions</title>
+  </rect>
+  <rect x="330" y="125" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-02-15: 7 contributions</title>
+  </rect>
+  <rect x="330" y="137" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-02-16: 6 contributions</title>
+  </rect>
+  <rect x="342" y="65" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-02-17: 4 contributions</title>
+  </rect>
+  <rect x="342" y="77" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-02-18: 2 contributions</title>
+  </rect>
+  <rect x="342" y="89" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-02-19: 1 contributions</title>
+  </rect>
+  <rect x="342" y="101" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-02-20: 7 contributions</title>
+  </rect>
+  <rect x="342" y="113" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-02-21: 4 contributions</title>
+  </rect>
+  <rect x="342" y="125" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-02-22: 5 contributions</title>
+  </rect>
+  <rect x="342" y="137" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-02-23: 8 contributions</title>
+  </rect>
+  <rect x="354" y="65" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-02-24: 3 contributions</title>
+  </rect>
+  <rect x="354" y="77" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-02-25: 6 contributions</title>
+  </rect>
+  <rect x="354" y="89" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-02-26: 4 contributions</title>
+  </rect>
+  <rect x="354" y="101" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-02-27: 6 contributions</title>
+  </rect>
+  <rect x="354" y="113" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-02-28: 3 contributions</title>
+  </rect>
+  <rect x="354" y="125" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-03-01: 7 contributions</title>
+  </rect>
+  <rect x="354" y="137" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-03-02: 7 contributions</title>
+  </rect>
+  <rect x="366" y="65" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-03-03: 3 contributions</title>
+  </rect>
+  <rect x="366" y="77" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-03-04: 1 contributions</title>
+  </rect>
+  <rect x="366" y="89" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-03-05: 5 contributions</title>
+  </rect>
+  <rect x="366" y="101" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-03-06: 8 contributions</title>
+  </rect>
+  <rect x="366" y="113" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-03-07: 4 contributions</title>
+  </rect>
+  <rect x="366" y="125" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-03-08: 0 contributions</title>
+  </rect>
+  <rect x="366" y="137" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-03-09: 0 contributions</title>
+  </rect>
+  <rect x="378" y="65" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-03-10: 3 contributions</title>
+  </rect>
+  <rect x="378" y="77" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-03-11: 3 contributions</title>
+  </rect>
+  <rect x="378" y="89" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-03-12: 0 contributions</title>
+  </rect>
+  <rect x="378" y="101" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-03-13: 2 contributions</title>
+  </rect>
+  <rect x="378" y="113" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-03-14: 1 contributions</title>
+  </rect>
+  <rect x="378" y="125" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-03-15: 4 contributions</title>
+  </rect>
+  <rect x="378" y="137" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-03-16: 9 contributions</title>
+  </rect>
+  <rect x="390" y="65" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-03-17: 4 contributions</title>
+  </rect>
+  <rect x="390" y="77" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-03-18: 3 contributions</title>
+  </rect>
+  <rect x="390" y="89" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-03-19: 3 contributions</title>
+  </rect>
+  <rect x="390" y="101" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-03-20: 9 contributions</title>
+  </rect>
+  <rect x="390" y="113" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-03-21: 6 contributions</title>
+  </rect>
+  <rect x="390" y="125" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-03-22: 6 contributions</title>
+  </rect>
+  <rect x="390" y="137" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-03-23: 0 contributions</title>
+  </rect>
+  <rect x="402" y="65" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-03-24: 8 contributions</title>
+  </rect>
+  <rect x="402" y="77" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-03-25: 8 contributions</title>
+  </rect>
+  <rect x="402" y="89" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-03-26: 8 contributions</title>
+  </rect>
+  <rect x="402" y="101" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-03-27: 9 contributions</title>
+  </rect>
+  <rect x="402" y="113" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-03-28: 1 contributions</title>
+  </rect>
+  <rect x="402" y="125" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-03-29: 7 contributions</title>
+  </rect>
+  <rect x="402" y="137" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-03-30: 4 contributions</title>
+  </rect>
+  <rect x="414" y="65" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-03-31: 3 contributions</title>
+  </rect>
+  <rect x="414" y="77" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-04-01: 5 contributions</title>
+  </rect>
+  <rect x="414" y="89" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-04-02: 0 contributions</title>
+  </rect>
+  <rect x="414" y="101" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-04-03: 0 contributions</title>
+  </rect>
+  <rect x="414" y="113" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-04-04: 2 contributions</title>
+  </rect>
+  <rect x="414" y="125" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-04-05: 2 contributions</title>
+  </rect>
+  <rect x="414" y="137" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-04-06: 8 contributions</title>
+  </rect>
+  <rect x="426" y="65" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-04-07: 2 contributions</title>
+  </rect>
+  <rect x="426" y="77" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-04-08: 2 contributions</title>
+  </rect>
+  <rect x="426" y="89" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-04-09: 3 contributions</title>
+  </rect>
+  <rect x="426" y="101" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-04-10: 5 contributions</title>
+  </rect>
+  <rect x="426" y="113" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-04-11: 0 contributions</title>
+  </rect>
+  <rect x="426" y="125" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-04-12: 9 contributions</title>
+  </rect>
+  <rect x="426" y="137" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-04-13: 1 contributions</title>
+  </rect>
+  <rect x="438" y="65" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-04-14: 0 contributions</title>
+  </rect>
+  <rect x="438" y="77" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-04-15: 1 contributions</title>
+  </rect>
+  <rect x="438" y="89" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-04-16: 4 contributions</title>
+  </rect>
+  <rect x="438" y="101" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-04-17: 2 contributions</title>
+  </rect>
+  <rect x="438" y="113" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-04-18: 1 contributions</title>
+  </rect>
+  <rect x="438" y="125" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-04-19: 0 contributions</title>
+  </rect>
+  <rect x="438" y="137" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-04-20: 4 contributions</title>
+  </rect>
+  <rect x="450" y="65" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-04-21: 7 contributions</title>
+  </rect>
+  <rect x="450" y="77" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-04-22: 8 contributions</title>
+  </rect>
+  <rect x="450" y="89" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-04-23: 8 contributions</title>
+  </rect>
+  <rect x="450" y="101" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-04-24: 5 contributions</title>
+  </rect>
+  <rect x="450" y="113" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-04-25: 0 contributions</title>
+  </rect>
+  <rect x="450" y="125" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-04-26: 8 contributions</title>
+  </rect>
+  <rect x="450" y="137" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-04-27: 9 contributions</title>
+  </rect>
+  <rect x="462" y="65" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-04-28: 0 contributions</title>
+  </rect>
+  <rect x="462" y="77" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-04-29: 9 contributions</title>
+  </rect>
+  <rect x="462" y="89" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-04-30: 0 contributions</title>
+  </rect>
+  <rect x="462" y="101" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-05-01: 3 contributions</title>
+  </rect>
+  <rect x="462" y="113" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-05-02: 1 contributions</title>
+  </rect>
+  <rect x="462" y="125" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-05-03: 9 contributions</title>
+  </rect>
+  <rect x="462" y="137" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-05-04: 1 contributions</title>
+  </rect>
+  <rect x="474" y="65" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-05-05: 4 contributions</title>
+  </rect>
+  <rect x="474" y="77" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-05-06: 4 contributions</title>
+  </rect>
+  <rect x="474" y="89" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-05-07: 2 contributions</title>
+  </rect>
+  <rect x="474" y="101" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-05-08: 0 contributions</title>
+  </rect>
+  <rect x="474" y="113" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-05-09: 0 contributions</title>
+  </rect>
+  <rect x="474" y="125" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-05-10: 0 contributions</title>
+  </rect>
+  <rect x="474" y="137" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-05-11: 3 contributions</title>
+  </rect>
+  <rect x="486" y="65" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-05-12: 8 contributions</title>
+  </rect>
+  <rect x="486" y="77" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-05-13: 1 contributions</title>
+  </rect>
+  <rect x="486" y="89" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-05-14: 6 contributions</title>
+  </rect>
+  <rect x="486" y="101" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-05-15: 7 contributions</title>
+  </rect>
+  <rect x="486" y="113" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-05-16: 2 contributions</title>
+  </rect>
+  <rect x="486" y="125" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-05-17: 8 contributions</title>
+  </rect>
+  <rect x="486" y="137" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-05-18: 8 contributions</title>
+  </rect>
+  <rect x="498" y="65" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-05-19: 3 contributions</title>
+  </rect>
+  <rect x="498" y="77" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-05-20: 6 contributions</title>
+  </rect>
+  <rect x="498" y="89" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-05-21: 6 contributions</title>
+  </rect>
+  <rect x="498" y="101" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-05-22: 5 contributions</title>
+  </rect>
+  <rect x="498" y="113" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-05-23: 2 contributions</title>
+  </rect>
+  <rect x="498" y="125" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-05-24: 9 contributions</title>
+  </rect>
+  <rect x="498" y="137" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-05-25: 0 contributions</title>
+  </rect>
+  <rect x="510" y="65" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-05-26: 8 contributions</title>
+  </rect>
+  <rect x="510" y="77" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-05-27: 8 contributions</title>
+  </rect>
+  <rect x="510" y="89" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-05-28: 5 contributions</title>
+  </rect>
+  <rect x="510" y="101" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-05-29: 3 contributions</title>
+  </rect>
+  <rect x="510" y="113" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-05-30: 9 contributions</title>
+  </rect>
+  <rect x="510" y="125" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-05-31: 9 contributions</title>
+  </rect>
+  <rect x="510" y="137" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-06-01: 5 contributions</title>
+  </rect>
+  <rect x="522" y="65" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-06-02: 1 contributions</title>
+  </rect>
+  <rect x="522" y="77" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-06-03: 8 contributions</title>
+  </rect>
+  <rect x="522" y="89" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-06-04: 9 contributions</title>
+  </rect>
+  <rect x="522" y="101" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-06-05: 8 contributions</title>
+  </rect>
+  <rect x="522" y="113" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-06-06: 0 contributions</title>
+  </rect>
+  <rect x="522" y="125" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-06-07: 7 contributions</title>
+  </rect>
+  <rect x="522" y="137" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-06-08: 7 contributions</title>
+  </rect>
+  <rect x="534" y="65" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-06-09: 2 contributions</title>
+  </rect>
+  <rect x="534" y="77" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-06-10: 9 contributions</title>
+  </rect>
+  <rect x="534" y="89" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-06-11: 1 contributions</title>
+  </rect>
+  <rect x="534" y="101" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-06-12: 0 contributions</title>
+  </rect>
+  <rect x="534" y="113" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-06-13: 3 contributions</title>
+  </rect>
+  <rect x="534" y="125" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-06-14: 3 contributions</title>
+  </rect>
+  <rect x="534" y="137" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-06-15: 6 contributions</title>
+  </rect>
+  <rect x="546" y="65" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-06-16: 9 contributions</title>
+  </rect>
+  <rect x="546" y="77" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-06-17: 5 contributions</title>
+  </rect>
+  <rect x="546" y="89" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-06-18: 6 contributions</title>
+  </rect>
+  <rect x="546" y="101" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-06-19: 1 contributions</title>
+  </rect>
+  <rect x="546" y="113" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-06-20: 4 contributions</title>
+  </rect>
+  <rect x="546" y="125" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-06-21: 1 contributions</title>
+  </rect>
+  <rect x="546" y="137" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-06-22: 8 contributions</title>
+  </rect>
+  <rect x="558" y="65" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-06-23: 3 contributions</title>
+  </rect>
+  <rect x="558" y="77" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-06-24: 1 contributions</title>
+  </rect>
+  <rect x="558" y="89" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-06-25: 7 contributions</title>
+  </rect>
+  <rect x="558" y="101" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-06-26: 2 contributions</title>
+  </rect>
+  <rect x="558" y="113" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-06-27: 1 contributions</title>
+  </rect>
+  <rect x="558" y="125" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-06-28: 5 contributions</title>
+  </rect>
+  <rect x="558" y="137" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-06-29: 7 contributions</title>
+  </rect>
+  <rect x="570" y="65" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-06-30: 1 contributions</title>
+  </rect>
+  <rect x="570" y="77" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-07-01: 1 contributions</title>
+  </rect>
+  <rect x="570" y="89" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-07-02: 6 contributions</title>
+  </rect>
+  <rect x="570" y="101" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-07-03: 6 contributions</title>
+  </rect>
+  <rect x="570" y="113" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-07-04: 5 contributions</title>
+  </rect>
+  <rect x="570" y="125" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-07-05: 1 contributions</title>
+  </rect>
+  <rect x="570" y="137" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-07-06: 2 contributions</title>
+  </rect>
+  <rect x="582" y="65" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-07-07: 9 contributions</title>
+  </rect>
+  <rect x="582" y="77" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-07-08: 3 contributions</title>
+  </rect>
+  <rect x="582" y="89" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-07-09: 3 contributions</title>
+  </rect>
+  <rect x="582" y="101" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-07-10: 7 contributions</title>
+  </rect>
+  <rect x="582" y="113" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-07-11: 1 contributions</title>
+  </rect>
+  <rect x="582" y="125" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-07-12: 2 contributions</title>
+  </rect>
+  <rect x="582" y="137" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-07-13: 2 contributions</title>
+  </rect>
+  <rect x="594" y="65" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-07-14: 9 contributions</title>
+  </rect>
+  <rect x="594" y="77" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-07-15: 4 contributions</title>
+  </rect>
+  <rect x="594" y="89" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-07-16: 3 contributions</title>
+  </rect>
+  <rect x="594" y="101" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-07-17: 1 contributions</title>
+  </rect>
+  <rect x="594" y="113" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-07-18: 7 contributions</title>
+  </rect>
+  <rect x="594" y="125" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-07-19: 2 contributions</title>
+  </rect>
+  <rect x="594" y="137" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-07-20: 7 contributions</title>
+  </rect>
+  <rect x="606" y="65" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-07-21: 0 contributions</title>
+  </rect>
+  <rect x="606" y="77" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-07-22: 3 contributions</title>
+  </rect>
+  <rect x="606" y="89" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-07-23: 9 contributions</title>
+  </rect>
+  <rect x="606" y="101" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-07-24: 9 contributions</title>
+  </rect>
+  <rect x="606" y="113" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-07-25: 2 contributions</title>
+  </rect>
+  <rect x="606" y="125" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-07-26: 4 contributions</title>
+  </rect>
+  <rect x="606" y="137" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-07-27: 2 contributions</title>
+  </rect>
+  <rect x="618" y="65" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-07-28: 1 contributions</title>
+  </rect>
+  <rect x="618" y="77" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-07-29: 5 contributions</title>
+  </rect>
+  <rect x="618" y="89" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-07-30: 9 contributions</title>
+  </rect>
+  <rect x="618" y="101" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-07-31: 4 contributions</title>
+  </rect>
+  <rect x="618" y="113" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-08-01: 1 contributions</title>
+  </rect>
+  <rect x="618" y="125" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-08-02: 5 contributions</title>
+  </rect>
+  <rect x="618" y="137" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-08-03: 9 contributions</title>
+  </rect>
+  <rect x="630" y="65" width="10" height="10" fill="#ebedf0" class="brick">
+    <title>2025-08-04: 0 contributions</title>
+  </rect>
+  <rect x="630" y="77" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-08-05: 3 contributions</title>
+  </rect>
+  <rect x="630" y="89" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-08-06: 2 contributions</title>
+  </rect>
+  <rect x="630" y="101" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-08-07: 9 contributions</title>
+  </rect>
+  <rect x="630" y="113" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-08-08: 2 contributions</title>
+  </rect>
+  <rect x="630" y="125" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-08-09: 5 contributions</title>
+  </rect>
+  <rect x="630" y="137" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-08-10: 4 contributions</title>
+  </rect>
+  <rect x="642" y="65" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-08-11: 6 contributions</title>
+  </rect>
+  <rect x="642" y="77" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-08-12: 7 contributions</title>
+  </rect>
+  <rect x="642" y="89" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-08-13: 7 contributions</title>
+  </rect>
+  <rect x="642" y="101" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-08-14: 8 contributions</title>
+  </rect>
+  <rect x="642" y="113" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-08-15: 5 contributions</title>
+  </rect>
+  <rect x="642" y="125" width="10" height="10" fill="#40c463" class="brick">
+    <title>2025-08-16: 4 contributions</title>
+  </rect>
+  <rect x="642" y="137" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-08-17: 2 contributions</title>
+  </rect>
+  <rect x="654" y="65" width="10" height="10" fill="#30a14e" class="brick">
+    <title>2025-08-18: 8 contributions</title>
+  </rect>
+  <rect x="654" y="77" width="10" height="10" fill="#9be9a8" class="brick">
+    <title>2025-08-19: 3 contributions</title>
+>>>>>>> c2fcdc9fd2398774721725fd4da321d84f8bc91e
   </rect>
   
   <!-- Paddle -->
   <rect x="334" y="260" width="60" height="8" class="paddle"/>
   
   <!-- Ball -->
+<<<<<<< HEAD
   <circle cx="356.7542721652367" cy="245" r="4" class="ball"/>
   
   <!-- Play Button -->
@@ -1936,5 +3049,11 @@
   
   <!-- Instructions -->
   <text x="364" y="305" text-anchor="middle" class="subtitle">🖱️ Haz clic en los ladrillos para ver detalles | 🎮 Presiona JUGAR para el juego completo</text>
+=======
+  <circle cx="364" cy="265" r="4" class="ball"/>
+  
+  <!-- Instructions -->
+  <text x="364" y="305" text-anchor="middle" class="subtitle">Use your contributions as bricks to break! 🎮</text>
+>>>>>>> c2fcdc9fd2398774721725fd4da321d84f8bc91e
   
 </svg>
