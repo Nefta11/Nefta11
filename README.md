@@ -3,7 +3,7 @@
                   
 ![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=02D9F7FF&size=35&center=true&vCenter=true&width=1000&lines=👽Hello!❤️;👋👋+I'm+Neftali+Arturo+👋👋;Welcome🛸+Siuu!) 
  
-<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWRocjJjaGExM3E5OHBzM3I2aGczYnUwbWIxM3U1OW51ejZubWRqMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JqmupuTVZYaQX5s094/giphy.gif" width="200"> 
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXQzcTFldnoyb3ZuaHM3aXgzNjk3cG9pdXllYmpvc20xYmt4dzU0dyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/78XCFBGOlS6keY1Bil/giphy.gif" width="200"> 
    
 </div>
 <a href="https://neftaliportafoliodev.netlify.app/" target="_blank">
